@@ -1,0 +1,5463 @@
+cls
+help commands
+ls
+help commands
+help
+1 + 3
+describe def
+let x = 1
+let x = 1;
+version
+help commands
+exit
+version
+exit
+version
+help commands | length
+exit
+help commands
+version
+help commands
+version
+cls
+help commands
+help commands | where command_type = "plugin"
+help commands | where category = "plugin"
+ls | where size > 1kb
+ls | where size = 1kb
+ls | where size == 1kb
+help commands | where category == "plugin"
+help commands
+version
+help commands
+version
+help commands
+help commands | where category == "filters"
+help commands
+help commands | length
+version
+help commands
+version
+help commands
+exit
+version
+help commands
+exit
+version
+help commands
+exit
+help commands
+version
+help commands | length
+help commands
+version
+help all
+help commands
+help register
+cls
+eq
+open ta230224.csv
+explore ta230224.csv
+help explore
+explore
+open ta230224.csv
+cls
+open ta230224.csv
+more ta230224.csv
+ltm
+cat ta230224.csv | grep protonmail
+ltm
+mm
+help with-env
+help shuffle
+help merge
+cls
+help merge
+ls
+version
+help commands
+exit
+cls
+exit
+help commands
+version
+exit
+help commands
+version
+help
+version
+exit
+version
+help commands
+version
+ls
+help commands
+exit
+ls
+help commands
+version
+exit
+help commands
+exit
+help commands
+version
+ls
+^ls
+exit
+help commands
+version
+exit
+for i in 1..10 { if $i == 2 { break }; print $i }
+for i in 1..10 { if $i == 7 { break }; print $i }
+exit
+version
+help commands
+cls
+config
+env
+help config
+$env
+$nu
+$nu.configpath
+$nu.config-path
+cls
+l
+cls
+$"(ansi cls)(ansi clsb)(ansi reset)(ansi home)"
+cls
+version
+configpath
+$nu
+cls
+$nu
+cd
+cd k/dl/
+open arkk.csv
+e arkk.csv
+open arkk.csv
+help --find iox
+ioxnamespace
+let-env IOX_DBNAME = "bananas"
+use bananas;
+ioxwrite "h2o_temperature,location=puget_sound,state=WA surface_degrees=53.7,bottom_degrees=42.1 16007456160"
+ioxnamespace
+let-env IOX_DBNAME = "bananas"
+export IOX_DBNAME='plums'
+cd test_fixtures
+cd line_proto
+ls
+cd lineproto
+ioxwritefile ./temperature.lp
+env | <\n>grep IOX
+ioxsql "show tables"
+help ioxsql
+ioxsql -d bananas "select * from cpu"
+ioxnamespace
+ioxsql -d low_card "select * from *"
+ioxsql "show tables"
+let-env IOX_DBNAME = "low_card"
+ioxsql "show tables"
+ioxwrite "h2o_temperature,location=puget_sound,state=WA surface_degrees=53.7,bottom_degrees=42.1 16007456160"
+ioxnamespace
+let-env IOX_DBNAME = "low_card"
+ioxsql "show tables"
+ioxsql "select * from system"
+ioxsql "select * from iox"
+ioxsql "select * from m0"
+ioxsql "select * from queries"
+ioxsql "select * from tables"
+ioxsql "select * from m0"
+ioxsql "show columns from m0"
+ioxsql "select * from m0"
+let-env IOX_DBNAME = "low_card"
+ioxsql "select * from m0"
+ioxnamespace
+show namespaces
+ioxnamespace
+let-env IOX_DBNAME = "bananas"
+ioxwrite "h2o_temperature,location=puget_sound,state=WA surface_degrees=53.7,bottom_degrees=42.1 16007456160"
+ls
+help commands
+help nu
+help help
+help commands | filter nu
+help commands
+help commands | where command_type = "alias"
+help commands | where command_type == "alias"
+cls
+help commands | where command_type == "alias"
+help commands | where name == "nu"
+help commands | where name == "joe blow"
+cls
+nuconfig
+for i in 1..3 { print $i }
+echo "foo" | each { |it| echo $"($it)" }
+echo "foo boo" | each { |it| echo $"($it)" }
+for i in 1..3
+for i in 1..3 | echo i
+for i in 1..3 { print $i }
+for i in 1..3 {echo $i }
+for i in 1..3 {sum $i }
+help sum
+help sort
+for i in 1..3 {sort $i }
+for i in 1..3 {sort }
+(1 2 3)
+"1 2 3"
+"1 2 3" | sort 
+abcdexbb | sort
+"abcdexbb" | sort
+help sort
+[airplane Truck Car] | sort -i
+nurun -n
+exit
+ls
+l
+ls -l
+help commands | where name == "joe blow"
+help commands
+version
+exit
+help commands
+version
+help commands
+version
+help commands
+for i in 1..10 { if $i == 2 { break }; print $i }
+help print
+help commands
+help commands | where name == print
+[1, 2, 3, 4, 5] | each {|x| if $x > 3 { break }; $x}
+print (2 + 3)
+version
+help commands
+exit
+cls
+version
+open holdings-daily-us-en-xlf.xlsx
+open holdings-daily-us-en-xlf.xlsx | getp holdings
+open holdings-daily-us-en-xlf.xlsx | get holdings
+open holdings-daily-us-en-xlf.xlsx | get holdings | to csv | save xlf.csv
+open xlf.csv
+pwd
+open holdings-daily-us-en-xlf.xlsx | get holdings
+cls
+open holdings-daily-us-en-xlf.xlsx | get holdings
+cls
+open q1.out
+open q1.out | to csv
+ca q1.out
+open q1.out
+l
+help commands
+help aliases
+help modules
+help operators
+help commands
+help aliases
+cargo run -- crates/nu-std/tests.nu
+cd crates/nu-std/
+ls
+source tests.nu
+main
+ls -l
+eq
+pwd
+17
+pwd
+j
+pwd
+cd ~/j/tmp17/nushell/
+cls
+help commands
+cls
+help commands
+help df
+help dfr
+help commands
+help commands | where category == "dataframe"
+dfr sample
+[[a b]; [1 2] [3 4]] | dfr into-df | dfr to-csv test.csv
+gs
+git status
+cat test.csv
+let df = (dfr open .\..\nz.csv)
+let df = (dfr open .\..\..\nz.csv)
+let df = (dfr open /Users/ma/j/tmp17/nz.csv)
+dfr ls
+let df = (dfr open /Users/ma/j/tmp17/nz.csv)
+dfr ls
+version
+let df = (dfr open /Users/ma/j/tmp17/nz.csv)
+dfr ls
+source toolkit.nu
+test
+test --fast --dataframe
+test --fast --dataframe dataframe::
+source toolkit.nu
+test --fast --dataframe
+cls
+test --fast --dataframe
+gs
+help commands | where category == "dataframe"
+help commands
+source toolkit.nu
+test --fast --dataframe
+help commands
+nurun -n
+help commands
+help commands | where category == "dataframe"
+cls
+help commands | where category == "dataframe"
+help
+help commands
+help commands | where category == "dataframe"
+let df = (dfr open .\nz.csv)
+ls -l nz.csv
+let df = (dfr open nz.csv)
+dfr ls
+source ./../nuscripts/dfcheck.nu
+$df | dfr first
+df ls
+dfr ls
+help commands | where category == "dataframe"
+help commands
+help commands | where category == "dataframe"
+source ./../nuscripts/dfcheck.nu
+help commands | where category == "dataframe"
+source ./../nuscripts/dfcheck.nu
+help commands | where category == "dataframe"
+./../nuscripts/dfcheck.nu
+source ./../nuscripts/dfcheck.nu
+dfr ls
+$df | dfr first
+$df | dfr dtypes
+help commands | where category == "dataframe"
+help commands
+help commands | where category == "dataframe"
+help commands
+help commands | where category == "lazyframe"
+help commands | where category == "expression"
+source ./../nuscripts/dfcheck.nu
+version
+help commands | where category == "expression"
+help commands | where category == "dataframe"
+$nu.startup-time
+cls
+version
+exit
+version
+exit
+version
+help commands | where category == "dataframe"
+help commands
+exit
+help commands
+exit
+help commands
+exit
+help commands
+help commands | where category == "bits"
+exit
+help commands | where category == "bits"
+exit
+nurun
+exit
+help commands | where category == "bits"
+exit
+2 | bits and 2
+[4 3 2] | bits and 2
+[4 3 2] | bits not -s
+17 | bits ror 60
+exit
+17 | bits ror 60
+exit
+help commands | where category == "bits"
+help commands
+exit
+help commands | where category == "bits"
+help commands
+help commands | where category == "bits"
+history
+17 | bits ror 60
+help history
+exit
+help commands | where category == "bits"
+exit
+help commands | where category == "bits"
+[4 3 2] | bits and 2
+exit
+[4 3 2] | bits and 2
+exit
+[4 3 2] | bits and 2
+exit
+help commands | where category == "bits"
+exit
+help commands | where category == "bits"
+exit
+help commands | where category == "bits"
+exit
+version
+exit
+version
+exit
+version
+exit
+version
+exit
+version
+exit
+version
+exit
+version
+exit
+version
+exit
+version
+exit
+version
+exit
+version
+exit
+version
+exit
+version
+exit
+version
+exit
+version
+exit
+version
+exit
+version
+exit
+help commands | where category == "dataframe"
+exit
+help commands | where category == "lazyframe"
+help commands | where category == "expression"
+exit
+$nu.startup-time
+help eval
+exit
+help commands | where category == "expression"
+help commands | where category == "bits"
+exit
+help commands | where category == "bits"
+[4 3 2] | bits and 2
+[4 3 2] | bits or 2
+exit
+bits
+exit
+bis
+bits
+exit
+bits
+exit
+bits
+bits and
+bits and 4
+2 | bits and 2
+3 | bits and 3
+str
+help bits and
+exit
+pwd
+exit
+help bits and
+help bits
+history
+[4 3 2] | bits or 2
+[4 3 2] | bits and 2
+help commands
+help commands | where category == "bits"
+bits shr 4
+4 | bits shr
+bits
+help bits not
+[4 3 2] | bits not -n '2'
+exit
+history
+$nu.startup-time
+exit
+$nu.startup-time
+exit
+help commands | where category == "bits"
+help commands | where category == "dataframe"
+help commands
+exit
+help commands | where category == "dataframe"
+help commands | where category == "extra"
+exit
+help commands | where category == "extra"
+exit
+help commands | where category == "extra"
+exit
+help commands | where category == "extra"
+version
+exit
+version
+4 | bits shr
+exit
+4 | bits shr
+bits shr 4
+[4 3 2] | bits and 2
+help bits not
+exit
+help bits not
+[4 3 2] | bits and 2
+exit
+[4 3 2] | bits and 2
+exit
+[4 3 2] | bits and 2
+exit
+[4 3 2] | bits and 2
+exit
+[4 3 2] | bits and 2
+exit
+[4 3 2] | bits and 2
+help bits not
+exit
+help bits not
+[4 3 2] | bits and 2
+exit
+[4 3 2] | bits and 2
+help bits not
+help commands | where category == "extra"
+help commands
+help commands | where category == "bits"
+exit
+version
+help commands | where category == "bits"
+[4 3 2] | bits and 2
+exit
+help commands | where category == "bits"
+exit
+help commands | where category == "bits"
+exit
+version
+help commands | where category == "bits"
+exit
+help scope
+scope aliases
+scope commands
+scope
+scope modules
+exit
+help commands | where category == "bits"
+exit
+help commands | where category == "bits"
+exit
+help commands | where category == "bits"
+exit
+help commands | where category == "bits"
+help commands | where category == "bytes"
+exit
+help commands | where category == "bytes"
+exit
+help commands | where category == "bytes"
+help commands | where category == "bits"
+exit
+help commands | where category == "bits"
+help commands | where category == "bytes"
+0x[1F FF AA AA] | bytes add 0x[AA]
+0x[1F FF AA AA] | bytes add 0x[AB]
+0x[1F FF AA AA] | bytes add 0x[ABFF]
+exit
+0x[1F FF AA AA] | bytes add 0x[ABFF]
+exit
+0x[1F FF AA AA] | bytes add 0x[ABFF]
+0x[10 AA FF AA FF] | bytes remove 0x[10 AA]
+0x[10 AA FF AA FF] | bytes remove 0x[10 99]
+exit
+0x[10 AA FF AA FF] | bytes remove 0x[10 99]
+exit
+0x[10 AA FF AA FF] | bytes remove 0x[10 99]
+exit
+help commands | where category == "bytes"
+help commands | where category == "bits"
+exit
+help commands | where category == "bits"
+help commands | where category == "bytes"
+history
+0x[1F FF AA AA] | bytes add 0x[ABFF]
+help commands | where category == "bits"
+history
+[4 3 2] | bits and 2
+exit
+[4 3 2] | bits and 2
+0x[10 AA FF AA FF] | bytes remove 0x[10 99]
+exit
+0x[10 AA FF AA FF] | bytes remove 0x[10 99]
+[4 3 2] | bits and 2
+exit
+help commands | where category == "bits"
+exit
+help commands | where category == "bits"
+help commands | where category == "bytes"
+exit
+help commands | where category == "bytes"
+help commands | where category == "bits"
+history
+0x[10 AA FF AA FF] | bytes remove 0x[10 99]
+[4 3 2] | bits and 2
+exit
+[4 3 2] | bits and 2
+0x[10 AA FF AA FF] | bytes remove 0x[10 99]
+help commands | where category == "bits"
+help commands | where category == "bytes"
+exit
+help commands | where category == "bytes"
+help commands | where category == "bits"
+0x[10 AA FF AA FF] | bytes remove 0x[10 99]
+[4 3 2] | bits and 2
+exit
+help gstat
+gstat
+exit
+format
+help format
+help histogram
+help commands | where category == "charting"
+exit
+help histogram
+ls | histogram type
+ls | histogram
+help histogram
+ls
+ls | histogram size
+ls
+exit
+exi
+exit
+let x = echo "123" | str length
+let x = (echo "123" | str length)
+$x
+exit
+let y = echo "123" | str length
+cre sub_subcommand
+exit
+history
+gstat
+exit
+cls
+l
+ls
+cls
+exit
+cls
+nuconfig
+nuconfigme
+exit
+cls
+exit
+cls
+exit
+cls
+exit
+cls
+exit
+t1x
+exit
+nuconfigme
+cd ..
+cd nuconfig
+source ./alias.nu
+help config
+$nu
+$nu.config-path
+exit
+configpath
+exit
+cd ..
+cd nuconfig/
+source ./alias.nu
+alias configpath = ($.nu.config-path)
+exit
+cd ..
+cd nuconfig/
+source ./alias.nu
+cls
+ls
+cls
+exit
+let-env IOX_DBNAME = "bananas"
+$env.PROMPT_COMMAND_RIGHT = { "" }
+nuconfigme
+cd ..
+cd nuconfig/
+source ./alias.nu
+exit
+cd ..
+cd nuconfig/
+source ./alias.nu
+exit
+cd ..
+cd nuconfig/
+source ./alias.nu
+nuconfigme
+nuconfig
+exit
+cls
+exit
+cls
+exit
+nuconfigme
+cd ..
+cd nuconfig/
+source ./alias.nu
+exit
+nuconfigme
+nuconfig
+pwd
+nuconfigme
+gs
+gd alias.nu
+gs
+ga alias.nu
+gcom 'alias.nu remove welcome banner at startup'
+jjj
+exit
+stars
+http get https://api.github.com/repos/nushell/nushell | get stargazers_count
+exit
+stars
+cls
+exit
+stars
+history
+hmei
+history
+exit
+help 
+exit
+history
+help history
+history | last 5
+history -l
+history | last 10
+exit
+help commands | where category == "charting"
+help commands | where category == "bits"
+exit
+help commands | where category == "bits"
+help commands
+gs
+exit
+help commands | where category == "bits"
+exit
+help commands | where category == "bits"
+exit
+help commands | where category == "bits"
+help commands | where category == "bytes"
+exit
+help commands | where category == "bytes"
+help commands | where category == "bits"
+exit
+help commands | where category == "bits"
+exit
+help commands | where category == "bits"
+exit
+help commands | where category == "bits"
+exit
+help commands | where category == "bits"
+exit
+help commands | where category == "bits"
+exit
+help commands | where category == "bits"
+exit
+exit
+help commands | where category == "bits"
+exit
+help commands | where category == "bits"
+exit
+help commands | where category == "bits"
+help commands | where category == "filters"
+help roll
+exit
+help roll
+exit
+help strings
+exit
+help from
+help bits not
+help bits
+exit
+help bits
+help format
+help commands | where category == "format"
+help from
+help from url
+help platform
+help platform ansi
+help
+help commands
+help ansi gradient
+exit
+help ansi gradient
+exit
+help format filesize
+exit
+help format filesize
+exit
+help format filesize
+help ansi gradient
+exit
+help ansi gradient
+help format filesize
+help from url
+history
+help roll
+help roll down
+[[a b]; [1 2] [3 4] [5 6]] | roll down
+exit
+$nu.startup-time
+exit
+$nu.startup-time
+exit
+$nu.startup-time
+exit
+$nu.startup-time
+exit
+$nu.startup-time
+exit
+$nu.startup-time
+exit
+$nu.startup-time
+exit
+help commands avg
+help avg
+help math
+help math avg
+[-50 100.0 25] | math avg
+exit
+help commands
+help commands math
+help commands | where category == "math"
+cls
+help commands | where category == "math"
+exit
+help math min
+[-50 100 25] | math min
+[50 100 25] | math min
+[50 100 25] | math max
+help commands | where category == "math"
+exit
+help commands | where category == "math"
+exit
+help commands | where category == "math"
+exit
+help commands | where category == "math"
+help commands
+exit
+help commands | where category == "math"
+help commands
+exit
+help commands
+help sum
+help commands math
+help math sum
+[1 2 3] | math sum
+[1 2 3] | sum
+help sum
+exit
+[1 2 3] | sum
+ls
+^ls
+ls
+sum toolkit.nu
+exit
+help math
+exit
+help math
+exit
+help math arccos
+exit
+help math arccos
+17
+t17
+cd nuscripts/
+ls
+source math.nu
+arc
+help print
+source math.nu
+arc
+help print
+source math.nu
+arc
+source math.nu
+arc
+source math.nu
+arc
+source math.nu
+arc
+gs
+ga math.nu
+gcom 'math arccos is working'
+jjj
+exit
+help math arccos
+help math
+help arccosh
+help math arccosh
+help math arcsin
+help math arccosh
+help math arccos
+t17
+cd nuscripts/
+source math.nu
+arc
+cls
+arc
+source math.nu
+arc
+source math.nu
+arc
+source math.nu
+arc
+source math.nu
+arc
+cls
+arc
+gs
+ga math.nu
+gcom 'add more arc commands'
+jjj
+version
+cls
+help math arccos
+help math
+help arcsinh
+help math arcsinh
+help math
+help math arctan
+help math arctanh
+source math.nu
+arc
+cls
+arc
+source math.nu
+cls
+arc
+gs
+ga math.nu
+gcom 'finish off the arc commands, they are now all working'
+jjj
+gs
+exit
+help math
+help math arctanh
+exit
+help math arctanh
+help math
+t17
+cd nuscripts/
+source math.nu
+arc
+exit
+help math
+exit
+help math
+exit
+help commands math
+exit
+help commands math
+exit
+help commands math
+exit
+help commands math
+cd ../nuscripts
+source math.nu
+arc
+exit
+cd ../nuscripts
+source math.nu
+exit
+cd ../nuscripts
+source math.nu
+arc
+exit
+help commands
+exit
+help commands
+exit
+help commands
+help commands where category = bits
+history
+help commands | where category == "bits"
+help commands
+exit
+help commands
+exit
+cls
+help math commands
+help commands math
+exit
+help math
+help math e
+help math
+exit
+help math
+help math pi
+math pi | math round --precision 2
+exit
+(math pi) / 2 | math sin
+exit
+help commands math
+exit
+help commands math
+exit
+help commands math
+exit
+help commands math
+exit
+help commands math
+exit
+help commands math
+help math cos
+[0 90 180 270 360] | math cos -d
+exit
+[0 90 180 270 360] | math cos -d
+exit
+cls
+help math
+exit
+help math
+exit
+help math
+cls
+help math
+exit
+help math
+exit
+help math
+exit
+help math
+exit
+help math
+help math e
+help math exp
+help math log
+exit
+100 | math log 10
+[16 8 4] | math log 2
+0 | math exp
+1 | math exp
+exit
+1 | math exp
+exit
+help math
+exit
+help math
+exit
+version
+exit
+version
+exit
+version
+exit
+help commands
+exit
+help commands
+help commands | where command_type == "builtin"
+help commands
+exit
+help commands
+exit
+help commands
+help commands | where command_type == "builtin"
+help commands | where command_type != "builtin"
+help commands | where category == "core"
+cls
+help commands | where category == "core"
+exit
+help commands
+exit
+help str
+version
+help str
+help str camel-case
+[[lang, gems]; [nu_test, 100]] | str camel-case lang
+[[lang, gems]; [michael_i_angerman, 100]] | str camel-case lang
+'michael_i_angerman' | str camel-case
+'Michael_I_Angerman' | str camel-case
+'John_went_to_the_store' | str camel-case
+exit
+help str
+help str title-case
+'michael i angerman ate peanut butter' | str title-case
+exit
+help commands
+exit
+help commands
+help str title-case
+help str
+exit
+help str
+exit
+help str
+exit
+help commands
+exit
+help commands
+exit
+help commands
+exit
+help commands
+exit
+help commands
+exit
+help commands
+help str
+exit
+help str
+help camel-case
+help str camel-case
+'this_is_the_second_case' | str camel-case
+exit
+help str camel-case
+'this-is-the-first-case' | str camel-case
+exit
+'this-is-the-first-case' | str camel-case
+exit
+help commands
+help commands | where category == "core"
+help commands | sort-by category
+exit
+help commands | sort-by category
+exit
+help commands | sort-by category
+cls
+exit
+nuconfig
+nuconfigme
+exit
+cd `/Users/ma/Library/Application Support/nushell/`
+ls
+source config-ansi.nu
+cls
+cd
+cls
+help commands | sort-by category
+help commands | where category == "string"
+help commands | where category == "str"
+help commands | where category == "strings"
+exit
+source config-ansi.nu
+exit
+cls
+exit
+help commands | where category == "strings"
+help commands | where category == "default"
+cls
+exit
+cls
+help commands | where category == "default"
+exit
+help commands | where category == "default"
+exit
+cls
+help commands | where category == "default"
+exit
+echo $nu
+cd $nu.default-config-dir
+ls
+exit
+help commands | where category == "default"
+exit
+help commands | where category == "default"
+cls
+exit
+help commands | where category == "default"
+help commands | where command_type == "custom"
+banner
+exit
+help commands | where command_type == "custom"
+cls
+exit
+help commands | where command_type == "custom"
+help commands | where category == "default"
+cls
+exit
+help commands | where command_type == "custom"
+cls
+exit
+help commands | where command_type == "custom"
+cls
+help commands | where command_type == "custom"
+exit
+help commands | where category == "default"
+cls
+help commands | where category == "default"
+exit
+help commands | where category == "default"
+help path
+path
+cls
+path
+help path
+help commands | where category == "default"
+exit
+$nu
+$nu.default-config-dir | path
+$nu.default-config-dir | path basename
+$nu.default-config-dir | path dirname
+$nu.default-config-dir | path exists
+$nu.default-config-dir | path parse
+$nu.default-config-dir | path split
+$nu.default-config-dir | path type
+history
+help commands | sort-by category
+cls
+help commands | sort-by category
+exit
+help commands | where category == "experimental"
+help from
+help commands | where category == "conversions"
+help commands | where category == "formats"
+help commands | where category == "filesystem"
+history
+help commands | sort-by category
+exit
+history
+help commands | where category == "experimental"
+help commands | where category == "formats"
+history
+help commands | sort-by category
+cls
+help commands | sort-by category
+exit
+help commands | where category == "default"
+help commands | where category == "experimental"
+help commands | where category == "formats"
+exit
+help commands | where category == "formats"
+help commands | where category == "experimental"
+exit
+help commands | where category == "experimental"
+help commands | where category == "formats"
+exit
+help commands | where category == "default"
+exit
+help commands | where category == "default"
+exit
+help commands | where category == "default"
+help commands | where category == "path"
+exit
+help commands | where category == "path"
+help commands | where category == "default"
+exit
+help commands | where category == "default"
+help commands | where category == "path"
+help commands | where category == "default"
+nuno
+exit
+exit
+help commands | where category == "default"
+help join
+exit
+help commands | where category == "default"
+help commands | where category == "chart"
+help histogram
+help commands | where category == "misc"
+exit
+help commands | where category == "default"
+exit
+help commands | where category == "default"
+help commands | where category == "filters"
+exit
+help commands | where category == "default"
+help commands | where category == "system"
+exit
+help commands | where category == "core"
+exit
+help commands | where category == "default"
+exit
+help commands | where category == "default"
+exit
+help commands | where name == tutor
+exit
+help commands | where category == "default"
+help commands | where category == "chart"
+help commands | where category == "core"
+help commands | where category == "chart"
+help commands | where category == "default"
+help commands | where category == "chart"
+exit
+help commands | where category == "default"
+exit
+help commands | where category == "default"
+help commands | where category == "chart"
+help commands | where category == "core"
+exit
+help commands | where category == "plugin"
+exit
+help commands | where category == "plugin"
+exit
+help commands | where category == "plugin"
+help commands | where category == "default"
+exit
+help commands | where category == "default"
+help commands
+cls
+help commands
+help commands | where command_type == "custom"
+help commands | where command_type == "keyword"
+help commands
+cls
+help commands
+exit
+help commands
+help commands | where category == "default"
+help commands | where category == "filters"
+exit
+cls
+help commands | where category == "filters"
+exit
+exit
+help commands
+exit
+which cp
+which rg
+which du
+which yes
+which which
+exit
+cls
+exit
+cls
+exit
+configpath
+config
+$nu.default-config-dir | path type
+$nu.default-config-dir
+$nu
+exit
+help commands
+exit
+help commands
+exit
+help commands
+cls
+exit
+help commands | where category == "filesystem"
+exit
+version
+exit
+open uirun230825.csv
+cls
+open uirun230825.csv
+exit
+version
+exit
+version
+exit
+help sqlite
+rg sqlite
+exit
+RUST_LOG=info cre ex04
+exit
+hc
+exit
+hc
+sled
+cd ~/j/tmp02/sled
+gs
+cd ..
+l
+cd sledblood
+l examples/
+cre ex04
+RUST_LOG=info cre ex04
+gs
+gd examples/ex04.rs
+gs
+ga examples/ex04.rs
+gcom 'db.storage_stats'
+gpo t1
+exit
+version
+exit
+version
+exit
+help random
+help random bool
+random bool
+help get
+random
+cls
+random
+http get https://api.github.com/repos/nushell/nushell | get stargazers_count
+http get https://finance.yahoo.com/gainers
+http get https://finance.yahoo.com/gainers | to csv
+http get https://finance.yahoo.com/gainers | to json
+http get https://finance.yahoo.com/gainers
+exit
+open look.json
+e look.json
+exit
+help reverse
+exit
+version
+exit
+help hash
+help version
+version
+exit
+help open
+eq
+cd crates/nu-command
+rg 'Load a file into a cell'
+cd src/filesystem/
+l
+help start
+start https://www.nushell.sh
+l
+ls
+cd ..
+du -sh *
+l viewers/
+cd conversions/
+l
+cls
+lsr
+cd ..
+l
+l path
+cd removed
+l
+cd ..
+cd generators/
+l
+cd ..
+l
+sledt
+09
+pwd
+cd ~/j/tmp09/sledtool
+ls
+cd src/
+l
+exit
+ls
+exit
+for i in 1..10 { if $i == 2 { break }; print $i }
+exit
+version
+exit
+cd crates/
+l
+ls
+cargo install nu_plugin_from_parquet
+cd /Users/ma/.cargo/bin/nu_plugin_from_parquet
+cd /Users/ma/.cargo/bin/
+l
+rm nu_plugin_from_parquet
+eq
+cd crates/
+l
+register ./nu_plugin_from_parquet/
+register /Users/ma/j/tmp17/nushell/crates/nu_plugin_from_parquet/
+exit
+register /Users/ma/j/tmp17/nushell/crates/nu_plugin_from_parquet/
+register ~/.cargo/bin/nu_plugin_from_parquet
+cd crates/nu_plugin_from_parquet/
+ls
+open -r sample.parquet | from parquet | first 3
+history
+open -r sample.parquet | from parquet | first 3
+exit
+history
+exit
+cd /tmp/crates/
+ls
+cd release/
+ls
+register ./nu_plugin_from_parquet
+exit
+open -r sample.parquet | from parquet | first 3
+exit
+version
+help commands | where category == "filesystem"
+help commands
+exit
+help commands | where command_type == builtin | sort-by name | get name | filter {|x| $x | str starts-with 'b'}
+help commands | where command_type == builtin | sort-by name | get name | filter {|x| $x | str starts-with 'f'}
+exit
+$nu.plugin-path
+exit
+register ./nu_plugin_len
+exit
+"hello" | len
+exit
+"hello" | len
+register ./nu_plugin_inc
+4 | inc
+7 | inc
+help inc
+help commands | where command_type == plugin
+help inc
+exit
+help commands | where command_type == plugin
+help len
+bill | len
+'this-is-the-first-case' | len
+exit
+version
+exit
+exit
+version
+exit
+register ./nu_plugin_len
+version
+"hello" | len
+exit
+"hello" | len
+"michael i angerman" | len
+exit
+version
+exit
+version
+exit
+register ./nu_plugin_len
+version
+"michael i angerman" | len
+exit
+"michael i angerman" | len
+"sam<\n>" | len
+"iris angerman" | len
+exit
+l
+cb
+eq
+cd crates/
+l
+cd ..
+cd target
+cd debug
+l
+register ./nu_plugin_len
+version
+"iris angerman" | len
+exit
+register ./nu_plugin_len
+"iris angerman" | len
+version
+exit
+version
+cd crates/nu_plugin_len/
+gs
+cb
+eq
+gs
+cd target/debug/
+ls
+register ./nu_plugin_len
+"iris angerman" | len
+version
+exit
+cd target/debug/
+ls
+register ./nu_plugin_from_parquet
+cd ..
+cd crates/nu_plugin_from_parquet/
+ls
+history
+open -r sample.parquet | from parquet | first 10
+exit
+register ./nu_plugin_from_parquet
+eq
+cd crates/nu_plugin_from_parquet/
+ls
+open -r sample.parquet | from parquet | first 10
+open -r sample.parquet | from parquet | first 7
+open -r sample.parquet | from parquet | first 15
+exit
+cd crates/nu_plugin_from_parquet/
+open -r sample.parquet | from parquet --metadata  | table -e
+exit
+iox sql
+exit
+ioxg
+exit
+ioxg
+iox01
+exit
+ioxg
+iox01
+exit
+iox
+exit
+help commands | where command = iox
+history
+help commands | where name = iox
+help commands
+help iox
+help zi
+help iox
+$.nu.aliases
+$.nu
+$nu.aliases
+$nu
+help commands
+help commands | where command_type == alias
+99
+t99
+ioxg
+exit
+iox
+exit
+ioxg
+t06
+exit
+t06
+exit
+t99
+exit
+t99
+exit
+cd ..
+cd nuconfigme
+ls
+lsd
+cd nuconfig
+ls
+source alias.nu
+iox
+source alias.nu
+ioxg
+iox
+nuconfigme
+ls
+source alias.nu
+ioxg
+iox
+exit
+ioxg
+iox
+./target/debug/influxdb_iox
+exit
+cd target/debug/
+ls
+./influxdb_iox
+ls
+./influxdb_iox
+exit
+source alias.nu
+exit
+ioxg
+./influxdb_iox query company_sensors "SELECT * FROM cpu LIMIT 10"
+cd target/debug/
+./influxdb_iox query company_sensors "SELECT * FROM cpu LIMIT 10"
+help influx
+exit
+which influxdb_iox
+which angerman
+ioxg
+cargo run
+exit
+ioxg
+cd target/debug/
+./influxdb_iox
+cd ..
+cargo run
+cargo run -vv
+exit
+ioxg
+cd ~/j/tmp06/inflxudb
+cd ~/j/tmp06/inflxudb_iox
+cd ~/j/tmp06
+cd influxdb_iox
+cd target/debug/
+./influxdb_iox
+exit
+cd ~/j/tmp06/influxdb_iox
+cargo run
+exit
+cd ~/j/tmp06/influxdb_iox
+cargo run
+exit
+$nu.config-path
+cd $nu.default-config-dir
+source config.nu
+env
+exit
+env
+exit
+cd $nu.default-config-dir
+source config.nu
+cd ~/j/tmp06/influxdb_iox
+cargo run
+exit
+history
+cd $nu.default-config-dir
+source config.nu
+history
+cd ~/j/tmp06/influxdb_iox
+cargo run
+exit
+ioxg
+iox
+exit
+ioxg
+./target/debug/influxdb_iox query company_sensors "SELECT * FROM cpu LIMIT 10"
+exit
+ioxg
+iox01
+iox02
+exit
+iox01
+exit
+iox01
+exit
+ioxg
+iox01
+exit
+ioxg
+iox01
+iox02
+exit
+ioxg
+iox01
+iox02
+iox sql
+exit
+ioxg
+iox01
+exit
+ioxg
+iox01
+iox02
+exit
+iox
+exit
+iox
+ioxg
+iox01
+iox02
+exit
+iox
+exit
+ioxg
+iox
+exit
+ioxg
+iox
+exit
+ioxg
+iox
+exit
+ioxg
+iox
+exit
+ioxg
+iox
+exit
+ioxg
+iox
+exit
+ioxg
+iox
+exit
+ioxg
+iox
+exit
+ioxg
+iox
+exit
+ioxg
+iox
+exit
+cd crates/nu-std
+ls
+cd std
+ls
+use log.nu
+ioxg
+iox
+exit
+ioxg
+iox
+exit
+ioxg
+iox
+eq
+cd crates/nu-std
+ls
+cd std
+use log.nu
+ioxg
+iox
+exit
+ioxg
+iox
+exit
+ioxg
+iox
+exit
+ioxg
+iox
+exit
+ioxg
+iox
+exit
+ioxg
+iox
+exit
+ioxg
+iox
+exit
+ioxg
+iox
+exit
+ioxg
+iox
+exit
+echo $nu.env-path
+exit
+help ucp
+help cp
+cls
+help cp
+cls
+help ucp
+exit
+ls
+version
+exit
+ls
+exit
+ls
+version
+exit
+version
+exit
+version
+exit
+version
+exit
+version
+exit
+help iox
+ls
+ioxsql help
+help --find iox
+ioxsql
+exit
+help --fin iox
+help --find iox
+ioxsql --dbname company_sensors "SELECT * FROM cpu LIMIT 10"
+cls
+ioxsql --dbname company_sensors "SELECT * FROM cpu LIMIT 10"
+ioxsql --dbname company_sensors "SELECT * FROM cpu LIMIT 10" | get cpu
+ioxsql --dbname company_sensors "SELECT * FROM cpu LIMIT 10" | get usage_idle
+exit
+ioxsql --dbname company_sensors "SELECT * FROM cpu LIMIT 10" | get usage_idle
+ioxsql --dbname company_sensors "SELECT * FROM cpu LIMIT 10<\n>"
+cls
+ioxsql --dbname company_sensors "SELECT * FROM cpu LIMIT 10"
+history
+gs
+exit
+ioxsql "show tables"
+ioxsql --dbname company_sensors "show tables"
+ioxsql --dbname company_sensors "show columns from cpu"
+ioxsql --dbname company_sensors "show columns from disk"
+ioxsql --dbname company_sensors "show columns from processes"
+gs
+exit
+ioxsql --dbname company_sensors "show columns from processes"
+exit
+ioxsql --dbname company_sensors "show columns from processes"
+ioxsql "show columns from processes"
+exit
+$env
+$env | get IOX_DBNAME
+$env.IOX_DBNAME = 'bananas'
+$env | get IOX_DBNAME
+exit
+$env | get IOX_DBNAME
+$env.IOX_DBNAME = 'bananas'
+$env | get IOX_DBNAME
+exit
+help --find iox
+exit
+cd test_fixtures/lineproto
+ls
+ioxwrite "h2o_temperature,location=puget_sound,state=WA surface_degrees=53.7,bottom_degrees=42.1 16007456160"
+exit
+ioxwrite "h2o_temperature,location=puget_sound,state=WA surface_degrees=53.7,bottom_degrees=42.1 16007456160"
+exit
+ioxwrite "h2o_temperature,location=puget_sound,state=WA surface_degrees=53.7,bottom_degrees=42.1 16007456160"
+exit
+ioxwrite "h2o_temperature,location=puget_sound,state=WA surface_degrees=53.7,bottom_degrees=42.1 16007456160"
+ioxwrite "h2o_temperature,location=puget_sound,state=WA surface_degrees=513.7,bottom_degrees=42.1 16807456160"
+ioxsql --dbname company_sensors "SELECT * FROM cpu LIMIT 10"
+ioxsql --dbname company_sensors "SELECT * FROM cpu-total LIMIT 10"
+ioxsql --dbname company_sensors "SELECT * FROM tables"
+help --find iox
+exit
+help --find iox
+help --find ioxwritefile
+help --find ioxwritefile | get params
+help ioxwritefile
+ioxg
+cd test_fixtures/lineproto
+ls
+ioxwritefile ./metrics.lp
+exit
+cd test_fixtures/lineproto
+ioxwritefile ./metrics.lp
+iox02
+history
+ioxsql --dbname company_sensors "SELECT * FROM tables"
+ioxsql --dbname company_sensors "SELECT * FROM cpu LIMIT 10"
+ioxsql "SELECT * FROM cpu LIMIT 10"
+ioxsql "SELECT * FROM cpu LIMIT 10" | get usage_idle
+exit
+help --find iox
+help ioxnamespace
+ioxnamespace
+histor
+history
+$env.IOX_DBNAME = 'bananas'
+ioxwrite "h2o_temperature,location=puget_sound,state=WA surface_degrees=53.7,bottom_degrees=42.1 16007456160"
+$env.IOX_DBNAME = 'nm_pop'
+ioxwrite "h2o_temperature,location=puget_sound,state=WA surface_degrees=53.7,bottom_degrees=42.1 16007456160"
+ioxnamespace
+ioxsql --dbname nm_pop "select * from *"
+ioxsql "select * from tables"
+ioxsql "show tables"
+ioxsql help
+help ioxsql
+ioxsql -d nm_pop "show tables"
+ioxsql -d nm_pop "select * from h2o_temperature"
+exit
+exit
+history
+ioxg
+cd test_fixtures/lineproto
+ioxwritefile ./metrics.lp
+ioxsql "SELECT * FROM cpu LIMIT 10" | get usage_idle
+$env.IOX_DBNAME = 'nm_pop'
+ioxwrite "h2o_temperature,location=puget_sound,state=WA surface_degrees=53.7,bottom_degrees=42.1 16007456160"
+ioxnamespace
+ioxsql --dbname nm_pop "select * from *"
+ioxsql -d nm_pop "select * from h2o_temperature"
+history
+help --find iox
+exit
+history
+ioxsql --dbname nm_pop "select * from *"
+ioxsql help
+ioxsql "select * from *"
+ioxwrite "hola"
+ioxwrite "h2o_temperature,location=puget_sound,state=WA surface_degrees=53.7,bottom_degrees=42.1 16007456160"
+ioxwrite --dbname joe "blow"
+ioxwrite --dbname joe_blow "go"
+help --find iox
+ioxwritefile bill
+ioxwritefile "why"
+ioxnamespace me
+ioxwritefile help
+ioxsql me
+help --find iox
+iox02
+exit
+iox02
+help --find iox
+iox01
+iox02
+namespace
+ioxnamespace me
+ioxnamespace
+exit
+ioxsql me
+ioxsql rick
+exit
+cls
+ioxsql paul
+cargo seach nu_plugin --limit 10
+cargo search nu_plugin --limit 10
+cargo search nu_plugin --limit 10 | lines
+cargo search nu_plugin --limit 10 | lines | parse "{crate_name}<\n>"
+cargo search nu_plugin --limit 10 | lines | parse "{crate_nam<\n><\n>"
+cargo search nu_plugin --limit 10 | lines | parse "{crate_name} ={version} #{description}"<\n>"<\n><\n>"
+cls
+cargo search nu_plugin --limit 10
+cargo search nu_plugin --limit 10 | lines
+cargo search nu_plugin --limit 10 | lines | parse "{crate_name} = {version} #{description}"
+$env.config.color_config.leading_trailing_space_bg = {bg: sandybrown}
+cargo search nu_plugin --limit 10 | lines | parse "{crate_name} = {version} #{description}"
+$env.config.color_config.leading_trailing_space_bg = {bg: sandybrown}
+cargo search nu_plugin --limit 10 | lines | parse "{crate_name} = {version} #{description}"
+exit
+$env.config.color_config.leading_trailing_space_bg = {bg: sandybrown}<\n>cargo search nu_plugin --limit 10 | lines | parse "{crate_name} = {version} #{description}"
+exit
+cargo search nu_plugin --limit 10 | lines | parse "{crate_name} = {version} #{description}"
+$env.config.color_config.leading_trailing_space_bg = {bg: sandybrown}<\n>cargo search nu_plugin --limit 10 | lines | parse "{crate_name} = {version} #{description}"
+exit
+help parse
+exit
+$env.config.color_config.leading_trailing_space_bg = {bg: sandybrown}<\n>cargo search nu_plugin --limit 10 | lines | parse "{crate_name} = {version} #{description}"
+$env.config.color_config.leading_trailing_space_bg = {bg: sandybrown}<\n>cargo search nu_plugin --limit 100 | lines | parse "{crate_name} = {version} #{description}"
+cls
+version
+exit
+ioxsql paul
+exit
+cls
+ioxsql michele
+exit
+ioxsql michele
+version
+exit
+ioxsql michele
+ioxsql "select * from *"
+exit
+history
+ioxsql --dbname company_sensors "SELECT * FROM tables"
+ioxsql "SELECT * FROM cpu LIMIT 10" | get usage_idle
+ioxsql "SELECT * FROM cpu LIMIT 10"
+exit
+ioxsql "SELECT * FROM cpu LIMIT 10"
+ioxsql dog
+exit
+history
+ioxsql "SELECT * FROM cpu LIMIT 10"
+exit
+ioxsql "SELECT * FROM cpu LIMIT 10"
+exit
+ioxsql "SELECT * FROM cpu LIMIT 10"
+ioxsql boo
+ioxsql jackass
+gls
+gs
+exit
+ioxsql jackass
+ioxsql "SELECT * FROM cpu LIMIT 10"
+exit
+ioxsql "SELECT * FROM cpu LIMIT 10"
+ioxsql jackass
+cls
+ioxsql jackass
+ioxsql "SELECT * FROM cpu LIMIT 10"
+gs
+cf
+gd nu-command/src/iox/sql.rs
+exit
+ioxsql "SELECT * FROM cpu LIMIT 10"
+ioxsql jackass
+exit
+ioxsql jackass
+ioxsql "SELECT * FROM cpu LIMIT 10"
+exit
+ioxsql jackass
+ioxsql "SELECT * FROM cpu LIMIT 10"
+exit
+ioxsql "SELECT * FROM cpu LIMIT 10"
+ioxsql jackass
+exit
+ioxsql "SELECT * FROM cpu LIMIT 10"
+ioxsql jackass
+ioxsql "SELECT * FROM cpu LIMIT 10"
+ioxsql jackass
+exit
+ioxsql "SELECT * FROM cpu LIMIT 10"
+ioxsql jackass
+exit
+ioxsql jackass
+cls
+ioxsql jackass
+ioxsql "SELECT * FROM cpu LIMIT 10"
+ioxsql "SELECT * FROM ass LIMIT 10"
+exit
+ioxsql "SELECT * FROM ass LIMIT 10"
+exit
+cls
+ioxsql "SELECT * FROM ass LIMIT 10"
+ioxsql "SELECT * FROM cpu LIMIT 10"
+cls
+ioxsql ding
+ioxsql "SELECT * FROM cxpu LIMIT 10"
+exit
+ioxsql help
+help ioxsql
+help --find iox
+help ioxsql
+exit
+version
+exit
+help --find iox
+ioxsql "SELECT * FROM cxpu LIMIT 10"
+history
+ioxsql ding
+ioxsql "SELECT * FROM cpu LIMIT 10"
+exit
+ls
+exit
+ls
+ioxsql "SELECT * FROM cpu LIMIT 10"
+ioxsql ding
+help --find iox
+exit
+ls
+help max
+help math max
+[-50 100 25] | math max
+[-50 100 20134 25] | math max
+exit
+help --find iox
+exit
+version
+help commands | where command_type == alias
+exit
+version
+exit
+version
+exit
+help ioxsql
+help --find iox
+exit
+help --find iox
+ioxsql ding
+ioxsql "SELECT * FROM cpu LIMIT 10"
+help --find iox
+ioxnamespace
+ioxsql "SELECT * FROM cpu LIMIT 10"
+ioxsql dog
+exit
+help ioxwritefile
+ioxwritefile ./test_fixtures/lineproto/metrics.lp
+ioxsql "SELECT * FROM cpu LIMIT 10"
+help ioxwrite
+ioxwrite -d bananas "cpu,region=la user=955111599 222522"
+ioxwrite -d my_bananas "cpu,region=la user=955111599 222522"
+ioxsql "SELECT * FROM cpu LIMIT 10"
+help ioxsql
+ioxsql -d my_bananas "select * from cpu"
+exit
+history
+ioxsql "SELECT * FROM cpu LIMIT 10"
+ioxwrite -d bananas "cpu,region=la user=955111599 222522"
+ioxwrite -d my_bananas "cpu,region=la user=955111599 222522"
+ioxsql -d my_bananas "select * from cpu"
+exit
+history
+ioxsql "SELECT * FROM cpu LIMIT 10"
+ioxwrite -d my_bananas "cpu,region=la user=955111599 222522"
+ioxsql -d my_bananas "select * from cpu"
+exit
+ls
+version
+history
+exit
+ls
+exit
+gs
+exit
+gs
+jjj
+exit
+gs
+exit
+gs
+exit
+rustc -V
+exit
+rustc -V
+exit
+$db
+$db | schema | table -e
+$db | query db 'insert into nudb (bool1,int1,float1,str1,datetime1) values (2,200,2.0,'str2','1969-04-17T06:00:00-05:00')'
+$db | query db 'select * from nudb'
+exit
+$db
+$db | schema
+$db | schema | table -e
+help table
+$db
+[[a b]; [1 2] [2 [4 4]]<\n>]
+[[a b]; [1 2] [2 [4 4]]] | table -e
+[[a b]; [1 2] [2 [4 4]]] | table --collapse
+$db | table --collapse
+exit
+schema
+help schema
+exit
+exit
+version
+exit
+version
+exit
+cd crates/
+ls nu-*
+ls nu-* | each { |file| open ($file.name + "/Cargo.toml")<\n>}
+ls nu-* | each { |file| open ($file.name + "/Cargo.toml") }
+ls nu-* | each { |file| open ($file.name + "/Cargo.toml")  | get dependencies? | name:$file.name, dependencies:$in}}
+ls nu-* | each { |file| open ($file.name + "/Cargo.toml")  | get dependencies? | name:$file.name, dependencies:$in}
+ls nu-* | each { |file| open ($file.name + "/Cargo.toml")  | get dependencies? }
+ls nu-* | each { |file| open ($file.name + "/Cargo.toml")  | get dependencies? | name:$file.name, dependencies:$in}
+ls nu-* | each { |file| open ($file.name + "/Cargo.toml")  | get dependencies? | name:$file.name, dependencies:$in}}
+ls nu-* | each { |file| open ($file.name + "/Cargo.toml")  | get dependencies? | name: $file.name, dependencies:$in}}
+ls nu-* | each { |file| open ($file.name + "/Cargo.toml")  | get dependencies? | name: $file.name, dependencies: $in}}
+ls nu-* | each { |file| open ($file.name + "/Cargo.toml")  | get dependencies? | name: $file.name, dependencies: $in }}
+ls nu-* | each { |file| open ($file.name + "/Cargo.toml")  | get dependencies? | name: $file.name, dependencies: $in }
+ls nu-* | each { |file| open ($file.name + "/Cargo.toml")  | get dependencies? | { name: $file.name, dependencies: $in }}
+cls
+ls nu-* | each { |file| open ($file.name + "/Cargo.toml")  | get dependencies? | { name: $file.name, dependencies: $in }}
+exit
+ls nu-* | each { |file| open ($file.name + "/Cargo.toml")  | get dependencies? | { name: $file.name, dependencies: $in }}
+cd crates
+ls nu-* | each { |file| open ($file.name + "/Cargo.toml")  | get dependencies? | { name: $file.name, dependencies: $in }}
+cls
+exit
+cls
+ls nu-* | each { |file| open ($file.name + "/Cargo.toml")  | get dependencies? | { name: $file.name, dependencies: $in }}
+cd crates
+cls
+ls nu-* | each { |file| open ($file.name + "/Cargo.toml")  | get dependencies? | { name: $file.name, dependencies: $in }}
+cls
+ls nu-* | each { |file| open ($file.name + "/Cargo.toml")  | get dependencies? | { name: $file.name, dependencies: $in }}
+exit
+version
+exit
+1 + 3
+exit
+cls
+exit
+cls
+1 + 3
+cls
+exit
+cls
+exit
+cls
+1 + 3
+cls
+exit
+cls
+1 + 3
+exit
+cls
+1 + 3
+exit
+cls
+1 + 3
+exit
+cls
+1 + 3
+exit
+cls
+1 + 3
+exit
+cls
+1 + 3
+cls
+1 + 3
+exit
+cls
+1 + 3
+let x = 'hola'
+$x
+cls
+$x
+exit
+cls
+1 + 3
+let x = 'hola'
+cls
+$x
+exit
+cls
+1 + 3
+exit
+cls
+1 + 3
+cls
+3 + 10
+cls
+exit
+cls
+1 + 3
+cls
+exit
+cls
+1 + 4444
+exit
+cls
+33 + 33
+exit
+cls
+77 + 88
+exit
+cls
+88 + 88
+exit
+cls
+33 + 44
+exit
+cls
+1 
+eq
+rg parse
+exit
+cls
+1
+exit
+cls
+1
+1 + 3
+hola
+ls
+version
+exit
+cls
+version
+1
+cls
+1
+exit
+cls
+1
+cls
+1
+cls
+1
+exit
+cls
+1
+exit
+cls
+1
+exit
+cls
+1
+exit
+cls
+1 + 3
+exit
+cls
+1
+exit
+cls
+1 + 3
+exit
+cls
+1 + 3
+exit
+cls
+1 + 3
+exit
+cls
+1 + 3
+exit
+cls
+version
+exit
+cls
+version
+ls
+exit
+cls
+1
+exit
+cls
+1
+version
+exit
+cls
+1 + 3
+exit
+cls
+version
+exit
+cls
+1
+cls
+version
+exit
+cls
+version
+exit
+cls
+version
+exit
+cls
+1
+version
+cls
+1234
+cls
+version
+cls
+ls
+cls
+1
+$nu
+cls
+1 | debug
+help debug
+debug -r
+exit
+cls
+1
+1234
+exit
+cls
+1
+exit
+cls
+1
+exit
+cls
+1 + 3
+exit
+cls
+1 + 3
+exit
+cls
+1 + 3
+exit
+cls
+1 + 3
+exit
+cls
+1 + 3
+exit
+cls
+1 + 3
+exit
+cls
+1 + 3
+exit
+cls
+1 + 3
+exit
+cls
+1 + 3
+exit
+cls
+1 + 3
+version
+exit
+cls
+1 + 3
+version
+gs
+cls
+version
+ls 
+ls | get name
+version
+version | get branch
+exit
+cls
+1 + 3
+help ast
+ast '1 + 3'
+cls
+ast '1 + 3'
+cls
+ast '1 + 3'
+cls
+1 + 3 | debug
+help debug
+cls
+help debug
+help debug | ast
+cls
+ast 
+cls
+ast '1 + 3' | debug
+exit
+cls
+help view source
+let abc = {|| echo 'hi' }; view source $abc
+exit
+ast '1 + 3'
+cls
+ast '1 + 3'
+exit
+ast '1 + 3'
+cls
+ast '1 + 3'
+ast '1 + 3' | debug
+cls
+ast '1 + 3' | debug
+ast '1 + 3' | debug | table -e
+cls
+ast '1 + 3' | debug | table
+ast '1 + 3' | debug
+help debug
+ast '1 + 3' | debug -r
+cls
+ast '1 + 3' | debug -r
+ls | inspect | get name | inspect
+cls
+ls | inspect | get name | inspect
+ls
+ls | inspect
+cls
+ls | inspect
+ast '1 + 3' | inspect
+cls
+ast '1 + 3' | inspect
+help ast
+ast -m '1 + 3'
+ast -j '1 + 3'
+cls
+ast '1 + 3'
+ast -m -j '1 + 3'
+ast -m -j '1 + 3' | get block
+help json
+help --find json
+cls
+ast -m -j '1 + 3' | get block
+ast -j '1 + 3' | get block
+cls
+ast -j '1 + 3' | get block
+cd crates/nu-plugin/
+l
+cd src/
+ls
+lsr
+cls
+lsr
+span
+version
+exit
+ast -j '1 + 3' | get block
+exit
+ast -j '1 + 3'
+cls
+ast -j '1 + 3'
+exit
+ast '1 + 3'
+exit
+cls
+ast '1 + 3'
+exit
+cls
+ast '1 + 3'
+ast 'hola'
+cls
+ast 'hola'
+cls
+ast version
+exit
+ast version
+cls
+astfilter version
+astfilter '1 + 3'
+cls
+astfilter '1 + 3'
+exit
+astfilter '1 + 3'
+cls
+ast '1 + 3'
+cls
+ast version
+exit
+astfilter version
+cls
+astfilter version
+exit
+astfilter version
+cls
+astfilter version
+astfilter "hola"
+cls
+astfilter "hola"
+exit
+$env.config.filesize.format = b
+0..59 | each {|r|<\n>sleep 1000ms<\n>echo [{index: ($r) mem: (debug:info | get process.memory)}]<\n>} | collect {$in} | flatten
+0..59 | each {|r|<\n>sleep 1000ms<\n>echo [{index: ($r) mem: (debug:info | get process.memory)}]<\n>} | collect | {$in} | flatten
+0..59 | each {|r|<\n>sleep 1000ms<\n>echo [{index: ($r) mem: (debug:info | get process.memory)}]<\n>} | collect  {$in} | flatten
+0..59 | each {|r|<\n>sleep 1000ms<\n>echo [{index: ($r) mem: (debug info | get process.memory)}]<\n>} | collect  {$in} | flatten
+nus
+ls -l
+source show_mem.nu
+show_mem
+gs
+ga show_mem.nu
+gcom 'initial commit of show_mem'
+jjj
+def rockme [] {<\n>    0..3 | each {|r|<\n>        sleep 10ms<\n>        echo [{index: ($r) mem: (debug info | get process.memory)}]<\n>    } | collect  {$in} | flatten<\n>}
+rockme
+gs
+ls -l
+rockme
+[1 2 3] | $in.1 * $in.2
+[1 2 3] | $in.1 + $in.2
+[1 2 3] | $in.0 + $in.2
+[1 2 3] | $in.0 * $in.2
+[1 2 3] | $in
+[1 2 3]
+exit
+exit
+nus
+source show_mem.nu
+cls
+source show_mem.nu
+exit
+nus
+source show_mem.nu
+exit
+nus
+source show_mem.nu
+exit
+mut recs = []<\n>mut previous = 0<\n><\n>def show_mem [] {<\n>    0..3 | each {|r|<\n>        sleep 10ms<\n>        let current = (debug info | get process.memory)<\n>        $recs = $recs ++ [{index: ($r) cur_mem: ($current) prev_mem: ($previous) delta: (($current | into int) - ($previous | into int))}]<\n>        $previous = $current<\n>    }<\n>    $recs<\n>}
+source show_mem.nu
+nus
+source show_mem.nu
+exit
+nus
+source show_mem.nu
+exit
+$recs
+exit
+nus
+source show_mem.nu
+show_mem
+exit
+source show_mem.nu
+show_mem
+gs
+ga show_mem.nu
+gcom 'update reference of where this script comes from'
+jjj
+source show_mem.nu
+table_ex
+source show_mem.nu
+table_ex
+show_mem_01
+show_mem
+source show_mem.nu
+show_mem
+exit
+source show_mem.nu
+show_mem
+source show_mem.nu
+show_mem_01
+exit
+source show_mem.nu
+show_mem_01
+format_auto
+show_mem_01
+format_b
+show_mem_01
+exit
+source show_mem.nu
+format_b
+show_mem_01
+gs
+gd show_mem.nu
+cls
+gd show_mem.nu
+gs
+ga show_mem.nu
+gcmw
+jjj
+exit
+source show_mem.nu
+show_mem
+show_mem_01
+show_mem
+format_auto
+show_mem
+exit
+source show_mem.nu
+format_auto
+show_mem
+exit
+scope engine_stats
+help scopre
+exit
+use nu-git-manager *
+help commands
+help gm
+cls
+help gm
+help commands | where name = gm
+help commands
+help commands | where command_type == custom
+cls
+help commands | where command_type == custom
+help commands | where name == gm
+cls
+help commands | where command_type == custom
+gm
+cls
+gm
+help modules git
+help modules
+cls
+help modules
+help table
+help modules
+help table
+help modules | table -e -d 1
+cls
+help modules | table -e -d 1
+help modules
+help modules | table
+cls
+help modules | table
+exit
+help modules | table
+ls
+use nu-git-manager *
+exit
+help modules | table
+ls
+use nu-git-manager *
+help modules | table
+help modules | where name == gh
+help modules | where name == nu-git-manager
+help modules | where name == dirs
+help modules
+exit
+help modules
+exit
+help operators
+help
+help help
+cls
+help help
+ls
+help help
+17
+~/j/tmp17
+ls
+cd nu-git-manager/
+l
+cd nu-git-manager/
+l
+c
+lsr
+c
+l
+rg module
+rg export
+cls
+rg export
+exit
+use nu-git-manager *
+exit
+use nu-git-manager *
+help gm
+gm clone https://github.com/amtoine/nu-git-manager
+gm update-cache
+exit
+version
+exit
+version
+exit
+version
+exit
+version
+exit
+version
+exit
+version
+exit
+use nu-git-manager *
+gm clone https://github.com/amtoine/nu-git-manager
+gm update-cache
+version
+use nu-git-manager *
+gm update-cache
+help gm
+use nu-git-manager *
+help gm
+exit
+use nupm *
+use nupm/
+nupm install --force --path .
+nuconfig
+ls -al
+cd nupm
+ls -l
+c
+l
+lsr
+exit
+use nu-git-manager *
+const REPRO_ENV = { GIT_REPOS_HOME: /tmp/repos/, GIT_REPOS_CACHE: /tmp/repos.cache }
+with-env $REPRO_ENV {<\n>    gm status | select root.path cache.path | values | each {<\n>        if ($in | path exists) { rm --recursive --force --verbose $in }<\n>    }<\n>}
+with-env $REPRO_ENV { gm clone https://github.com/amtoine/nu-git-manager }
+with-env $REPRO_ENV { gm update-cache }
+version
+exit
+version
+exit
+source sort_by.nu
+sortbyme
+open $nu.history-path
+open $nu
+$nu
+nuconfig
+open history.txt
+nus
+l
+source sort_by.nu
+sortbyme
+$nu
+nuconfig
+more history.txt
+help lines
+version
+open history.txt | lines
+open history.txt | lines | split column ' ' cmd
+source sort_by.nu
+sortbyme
+exit
+source sort_by.nu
+sortbyme
+exit
+help split
+cls
+help split
+helpl split column
+help split column
+cls
+help split column
+'john brown ran home' | split column ' ' cmd
+'john brown ran home' | split column ' '
+'john brown ran home' | split column ' ' cmd ding dong dies
+'john brown ran home now' | split column ' ' cmd ding dong dies
+'john brown ran home now and loved life' | split column ' ' cmd ding dong dies
+'john brown ran home now and loved life' | split column ' ' cmd ding dong dies puke
+'john brown ran home' | split column ' ' cmd ding dong dies puke
+cls
+help split column
+help lines
+cls
+help lines
+exit
+gs
+open $nu.history-path | lines | first 10 | save why.txt
+cat why.txt
+gs
+l
+nus
+l
+source sort_by.nu
+savenlines 15
+gs
+cat why.txt
+savenlines 3
+source sort_by.nu
+savenlines 3
+savenlines 4
+cat why.txt
+savenlines 2
+cat why.txt
+savenlines 7
+cat why.txt
+gs
+ga sort_by.nu
+gcom 'add the function savenlines'
+jjj
+gs
+exit
+source sort_by.nu
+openmewhy why.txt 4
+openmeline why.txt 4
+openmelines why.txt 4
+cat why.txt
+savenlines 20
+cat why.txt
+savenlines 10
+cat why.txt
+sortbyme
+gs
+ga sort_by.nu
+gcom 'add in the function openmelines'
+jjj
+exit
+source sort_by.nu
+sorthistory
+sorthistory 20
+gs
+gco sort_by.nu
+gs
+source sort_by.nu
+groupby
+source sort_by.nu
+groupby why.txt
+savenlines 30
+groupby why.txt
+gs
+ga sort_by.nu
+gcom 'add in the function groupby'
+jjj
+gs
+source sort_by.nu
+savenlines 50
+source sort_by.nu
+groupby why.txt
+help group-by
+cls
+help group-by
+ls
+ls | group-by type
+cls
+ls | group-by type
+help group-by
+groupby why.txt
+[john bill mike bill] | group-by
+[john bill mike bill] | group-by --to-table
+[john bill mike bill]
+help group-by
+groupby why.txt
+source sort_by.nu
+groupby why.txt
+groupby why.txt | type
+groupby why.txt | describe
+source sort_by.nu
+gs
+gd sort_by.nu
+source sort_by.nu
+gs
+gco sort_by.nu
+source sort_by.nu
+groupby why.txt
+source sort_by.nu
+groupby why.txt
+source sort_by.nu
+sortbyme
+source sort_by.nu
+sortbyme
+gs
+gd sort_by.nu
+gs
+gco sort_by.nu
+source sort_by.nu
+groupby why.txt
+source sort_by.nu
+groupby why.txt
+source sort_by.nu
+groupby why.txt
+source sort_by.nu
+groupby why.txt
+help group-by
+more why.txt
+gs
+gco sort_by.nu
+help save
+source sort_by.nu
+groupby why.txt
+source sort_by.nu
+groupby why.txt
+gs
+exit
+source sort_by.nu
+groupby why.txt
+cls
+groupby why.txt
+gs
+gco sort_by.nu
+help update
+cls
+help update
+{'name': 'nu', 'stars': 5} | update name 'Nushell'
+{'name': 'nu', 'stars': 5}
+cls
+help update
+help table
+cls
+help table
+source sort_by.nu
+sortbyme
+gs
+gco sort_by.nu
+source sort_by.nu
+sortbyme
+exit
+source sort_by.nu
+sortbyme
+gs
+gco sort_by.nu
+exit
+source sort_by.nu
+sortbyme
+exit
+source sort_by.nu
+sortbyme
+gs
+gco sort_by.nu
+source sort_by.nu
+sortbyme
+source sort_by.nu
+sortbyme
+help table
+gs
+gco sort_by.nu
+exit
+npmg
+cd ..
+cd nupm
+l
+use nupm
+nupm install --force --path .
+l
+cd nupm
+l
+17
+cd
+cd j
+cd tmp17
+rm -fr nupm
+getnupm
+exit
+use nupm
+nupm install
+nupm install --path .
+nuconfig
+l
+rm -fr nupm
+nupmg
+exit
+cd nupm
+ls
+use nupm
+nupm install --path .
+nuconfig
+ls -l
+npmg
+cd ~/j/tmp17
+cd nupm
+use nupm
+nupm install --path .
+nuconfig
+ls -l
+cd nupm
+ls
+lsr
+cls
+lsr
+$env
+cls
+$env
+exit
+$env
+version
+$env.config
+exit
+$nu
+exit
+$nu.default-config-dir
+$nu.default-config-dir | path join "nupm"
+cd nushell
+nuconfig
+ls
+exit
+$env
+exit
+$env.NU
+$env.NUPM_HOME
+exit
+$env.NUPM_HOME
+cd $env.NUPM_HOME
+ls -l
+lsr
+cls
+lsr
+$env.PATH = (<\n>    $env.PATH<\n>        | split row (char esep)<\n>        | ....<\n>        | prepend ($env.NUPM_HOME | path join "scripts")<\n>        | uniq<\n>)<\n>
+$env.PATH = (<\n>    $env.PATH<\n>        | split row (char esep)<\n>        | prepend ($env.NUPM_HOME | path join "scripts")<\n>        | uniq<\n>)<\n>
+$env.PATH
+$env.NU_LIB_DIRS
+exit
+$env.NU_LIB_DIRS
+$env.PATH
+exit
+$env
+cd $env.NUPM_HOME
+ls -l
+cd scripts
+ls -l
+ls
+lsr
+cd ..
+lsr
+cls
+lsr
+exit
+nupm
+nupm --help
+exit
+use nupm
+cd
+cd j
+cd nu-git-manager/
+exit
+use nupm
+cd nu-git-manager/
+use nupm
+nupm install --path --force nu-git-manager
+cd nu-git-manager/
+nupm install --path --force nu-git-manager
+exit
+nupm
+exit
+nupm
+use nupm
+nupm
+t17
+cd nupm
+ls -l
+ls
+cd nupm
+ls
+^ls
+^ls -l
+lsl
+^ls -l
+$nu
+$env
+cls
+$env
+exit
+version
+t17
+cd nupm
+ls
+use nupm
+nupm install --path "~/.local/share/nupm"
+$env.NUPM_HOME
+exit
+$env.NUPM_HOME
+exit
+$nu
+exit
+$nu.home-path
+exit
+$env.NUPM_HOME
+exit
+ls
+use nupm
+nupm install --path .
+cd
+cd .nupm
+ls -l
+lsd
+lsr
+cls
+lsr
+exit
+nupm
+exit
+cd .nupm
+nupm
+use nupm
+nupm
+eq
+fd config.nu
+help default
+cls
+help default
+def get-nupm-home []: nothing -> path {<\n>    $env.NUPM_HOME? | default ($nu.home-path | path join ".nupm"<\n>    ) | path expand | path sanitize<\n>}<\n>
+def get-nupm-home []: nothing -> path {<\n>    $env.NUPM_HOME? | default ($nu.home-path | path join ".nupm")<\n>    | path expand | path sanitize<\n>}<\n>
+def get-nupm-home []: nothing -> path {<\n>    $env.NUPM_HOME? | default ($nu.home-path | path join ".nupm")<\n>    | path expand }
+get-nupm-home
+exit
+get-nupm-home
+exit
+nupm
+nupm --help
+cls
+nupm --help
+exit
+nupm
+exit
+$env.NUPM_HOME
+nupm
+exit
+nupm install --path --force nu-git-manager
+nupm install --path --force .
+use nu-git-manager *
+help gm
+history
+gm --help
+gm list
+gm update-cache
+gm list
+gm status
+history
+gm
+use nu-git-manager *
+gm status
+cd
+cd .local
+cd
+cd .cache/
+ls -l
+cd nu-git-manager/
+l
+cat cache.nuon
+cd ..
+l
+cd ..
+l
+help gm
+gm list
+cd
+cd .nupm
+l
+cd modules/
+l
+rm -fr nu-git-manager/
+cd
+cd .cache/
+l
+rm -fr nu-git-manager/
+cd ..
+rm -fr .cache
+exit
+gm list
+help gm
+nupm install --path --force .
+use nu-git-manager *
+gm list
+gm update-cache
+gm list
+gm status
+exit
+gm status
+exit
+gm status
+help gm
+gm list
+gm status
+cd
+cd .local
+gm list
+gm clone https://github.com/stormasm/nu_plugin_jwalk
+gm status
+gm help
+gm
+gm update-cache
+gm list
+gm update-cache
+gm status
+cd
+cd .cache
+cd nu-git-manager/
+ls -l
+ls
+cd
+cd .local/share/repos/
+l
+cd github.com/
+l
+cd stormasm/
+l
+cd nu_plugin_jwalk/
+l
+exit
+gm status
+cd
+cd .cache
+ls -l
+rg GIT_REPOS_HOME
+rg GIT_REPOS_CACHE
+exit
+gm status
+exit
+gm status
+exit
+ngm
+exit
+ngm
+exit
+ngm
+gm status
+exit
+$nu
+$env
+$nu
+cp $nu.config-path ~/j/tmp20
+nuconfig
+sum config.nu ~/j/tmp20/config.nu
+exit
+$env.NU_CONFIG_ME
+cp $nu.config-path $env.NU_CONFIG_ME
+t17
+pwd
+exit
+cp $nu.config-path $env.NU_CONFIG_ME
+sum $nu.config-path ($env.NU_CONFIG_ME | path join "config.nu"<\n>)
+exit
+cpconfig
+nuconfig
+ls
+source alias.nu
+cpconfig
+exit
+cpconfig
+exit
+$nu
+nuconfig
+exit
+nuconfig
+source alias.nu
+exit
+$ALIAS_PATH
+exit
+$env.alias-path
+nuconfig
+cpconfig
+source alias.nu
+cpconfig
+exit
+cpconfig
+nuconfigme
+gs
+cls
+gs
+gd alias.nu
+exit
+cpconifg
+cpconfig
+nuconfigme
+gs
+gd env.nu
+gs
+gd alias.nu
+exit
+cpconfig
+exit
+cpconfig
+nuconfigme
+c
+gs
+gd alias.nu
+cls
+gd alias.nu
+gs
+gd config.nu
+cls
+gd config.nu
+gs
+gd env.nu
+cls
+gd env.nu
+gs
+ga alias.nu config.nu env.nu
+gcom 'update aliases for nu-git-manager'
+jjj
+exit
+cpconfig
+gs
+nuconfigme
+gs
+pwd
+exit
+gm status
+exit
+gm status
+gm clone https://github.com/stormasm/nu_plugin_jwalk
+gm update-cache
+exit
+ngm
+l
+exit
+exit
+exit
+exit
+ngm
+nupm-ngm
+ls -l
+cd
+cd .nupm/modules/
+l
+cd nupm
+l
+exit
+use nupm
+nupm install --force --path .
+ngm
+nupm-ngm
+exit
+ngm
+l
+gs
+use nupm
+nupm install --path --force nu-git-manager
+ls
+cd src/
+l
+pwd
+exit
+use nupm
+nupm install --path --force nu-git-manager
+exit
+nupm install --path --force nu-git-manager
+cd ..
+nupm install --path --force src/nu-git-manager
+exit
+$env
+$env.NUPM_HOME
+cd
+rm -fr .nupm
+nupmg
+use nupm
+nupm install --force --path .
+ngm
+$env.GIT_REPOS_HOME
+$env.GIT_REPOS_CACHE
+cd
+rm -fr nu-git-manager/
+ngm
+exit
+ngm
+use nupm
+ls
+nupm install --path --force nu-git-manager
+nupm install --path --force src/nu-git-manager
+nupm install --path /Users/ma/j/tmp17/nu-git-manager
+$env.NUPM_HOME
+cd
+rm -fr .nupm
+ngm
+nupm install --path nu-git-manager
+nupmg
+use nupm
+nupm install --force --path .
+ngm
+use nupm
+nupm install --path ./nu-git-manager
+nupm install --path nu-git-manager
+nupm install --path ~/j/tmp17/nu-git-manager/
+nupm install --path /Users/ma/j/tmp17/nu-git-manager --force
+nupm install --path nu-git-manager --force
+nupm install --path ./nu-git-manager --force
+nupm install --path ~/j/tmp17/nu-git-manager --force
+exit
+gm status
+exit
+use nu-git-manager *
+gm status
+gm clone https://github.com/stormasm/nu_plugin_jwalk
+gm update-cache
+ngm
+history
+nuconfig
+source alias.nu
+ngm
+ngmi
+gs
+ngmi
+gm update-cache
+use nu-git-manager *
+gm update-cache
+ngmi
+use nu-git-manager *
+gm update-cache
+list-repos-in-store
+gm list-repos-in-store
+gm list
+gm
+gm list
+gm update-cache
+gm list
+ngmi
+gm list
+gm update-cache
+gm list
+ngmi
+gm update-cache
+help path
+gm status
+use nu-git-manager *
+ngm
+use nu-git-manager *
+gm status
+gm update-cache
+ngm
+use nu-git-manager *
+gm status
+exit
+ngm
+use nu-git-manager *
+gm status
+gm clone https://github.com/stormasm/nu_plugin_jwalk
+gm update-cache
+ngm
+l
+cd src/
+l
+cd nu-git-manager/
+l
+cd fs
+ls
+source cache.nu
+check-cache-file
+gm status
+use nu-git-manager *
+source cache.nu
+gm status
+check-cache-file /Users/ma/nu-git-manager/cache.nuon
+rg add-to-cache
+cls
+rg add-to-cache
+rg make-cache
+gm status
+cd fs
+ls
+cd src/
+ls
+cd nu-git-manager/
+ls
+cd fs
+ls
+source cache.nu
+make-cache /Users/ma/nu-git-manager/cache.nuon
+gm status
+cd
+cd nu-git-manager/
+l
+ls -l
+cd repos
+ls
+cd ..
+ls
+l
+mkdir (cache.nuon | path dirname)
+path
+pwd
+cd ..
+path nu-git-manager
+path dirname
+cd nu-git-manager/
+cache.nuon | path dirname
+(cache.nuon | path dirname)
+('cache.nuon' | path dirname)
+help path
+gm status
+pwd
+(/Users/ma/nu-git-manager/cache.nuon | path dirname)
+("/Users/ma/nu-git-manager/cache.nuon" | path dirname)
+mkdir ("/Users/ma/nu-git-manager/cache.nuon" | path dirname)
+ls
+ls -l
+gm status
+ngm
+rg GIT_REPOS_CACHE
+$env.GIT_REPOS_CACHE
+cd
+cd nu-git-manager/
+ls
+lsr
+gm update-cache
+gm status
+ngm
+gs
+gco src/nu-git-manager-sugar/mod.nu
+gs
+ngm
+gs
+gco src/nu-git-manager/mod.nu
+gs
+ngmi
+gm status
+gm update-cache
+cd fs
+ls
+cd src/nu-git-manager-sugar/fs/
+ls
+cd ..
+cd nu-git-manager/
+cd fs
+ls
+source store.nu
+list-repos-in-store
+$env.GIT_REPOS_CACHE?
+help default
+path expand
+path
+help path sanitize
+help glob
+cls
+help glob
+let x = 1
+print $x
+ngm
+cd
+cd .nupm/modules/
+ls
+cd nu-git-manager/
+ls
+cd fs
+ls
+source store.nu
+list-p1
+source store.nu
+list-p1
+cd
+cd .nupm/modules/nu-git-manager/
+source store.nu
+ls
+cd fs
+source store.nu
+list-p1
+source store.nu
+list-p1
+[john]
+[john] | range 1.. | zip ($sorted | range ..(-2))
+let bill = [john]
+$bill | range 1.. | zip ($bill | range ..(-2))
+let sorted = [amtoine]
+$sorted | range 1.. | zip ($sorted | range ..(-2))
+let sorted = [amtoine]
+$sorted | range 1..
+exit
+exit
+nus
+source rangebug.nu
+test01
+def test01 [] {<\n>    let sorted = [storm]<\n>    $sorted | range 1.. | zip ($sorted | range ..(-2))<\n>}
+test01
+nus
+source rangebug.nu
+test01
+nus
+t17
+cd ~/j/tmp17
+cd nuscripts
+source rangebug.nu
+test01
+nus
+cd ..
+cd nuscripts/
+source rangebug.nu
+test01
+nus
+source rangebug.nu
+test01
+nus
+source rangebug.nu
+test01
+eq
+rg "pub struct Range"
+exit
+version
+exit
+version
+exit
+version
+exit
+source rangebug.nu
+test01
+source rangebug.nu
+test01
+gs
+source rangebug.nu
+test02
+test02 | table -e
+exit
+test02 | table -e
+source rangebug.nu
+test02
+[1 2 3] | range 1..
+[1 2 3] | range 2..
+[1 2 3 4] | range 1..2
+[1] | range 1..
+[1 2] | range 1..
+[1 2] | range 0..
+source rangebug.nu
+test01
+source rangebug.nu
+test01
+test02
+gs
+ga rangebug.nu
+gcom 'update rangebug.nu with an explanation of what the script is supposed to do'
+jjj
+source rangebug.nu
+test02
+test01
+test03
+source rangebug.nu
+test01
+test02
+test03
+gs
+ga rangebug.nu
+gcom 'add another case to rangebug.nu'
+jjj
+let sorted = [1 2 3 4]
+($sorted | range ..(-2))
+($sorted | range ..(-3))
+($sorted | range ..(-4))
+help range
+[0,1,2,3,4,5] | range (-3)..-2
+[0,1,2,3,4,5] | range ..-2
+[0,1,2,3,4,5] | range ..-1
+[0,1,2,3,4,5] | range ..-2
+help zip
+cls
+help zip
+[1 2] | zip [3 4]
+[michael michele jason] | zip [angerman godwin booth]
+source rangebug.nu
+test04
+gs
+ga rangebug.nu
+gcom 'more work on how zip works'
+jjj
+[1] | range 1..
+[] | range 1..
+[1] | range 1..
+($sorted | range ..(-2))
+let sorted = [1]
+($sorted | range ..(-2))
+[] | zip []
+exit
+[] | zip []
+let sorted = [1]
+[] | zip ($sorted | range ..(-2))
+let sorted = [1]
+($sorted | range ..(-2))
+([] | range ..(-2))
+([1] | range ..(-2))
+exit
+([1] | range ..(-2))
+source rangebug.nu
+test01a
+source rangebug.nu
+test01a
+gs
+gco rangebug.nu
+gs
+source rangebug.nu
+test01b
+([1] | range ..(-2))
+exit
+([1] | range ..(-2))
+([1] | range ..(-1))
+([1 2 3] | range ..(-1))
+([1 2 3] | range ..(-2))
+([1 2 3] | range ..(-3))
+([1 2 3] | range ..(-4))
+([1 2 3] | range ..(-1))
+([1 2 3] | range ..(1))
+([1 2 3] | range ..1)
+[1 2 3] | range ..1
+help range
+[0,1,2,3,4,5] | range (-3)..-2
+[0,1,2,3,4,5] | range ..-2
+[0,1,2,3,4,5] | range ..2
+[0,1,2,3,4,5] | range ..-2
+([1] | range ..(-2))
+([1] | range ..(2))
+exit
+~/j/tmp17/nuscripts> ([1] | range ..(-2))<\n>╭────────────╮<\n>│ empty list │<\n>╰────────────╯<\n>~/j/tmp17/nuscripts> ([1] | range ..(2))<\n>╭───┬───╮<\n>│ 0 │ 1 │<\n>╰───┴───╯<\n>
+([1] | range ..(-2))
+([1] | range ..(2))
+exit
+([1] | range ..(-2))
+([1] | range ..(-1))
+([1] | range ..(-4))
+([1] | range ..(-2))
+([1] | range ..(-3))
+([1] | range ..(-2))
+([1] | range ..(-1))
+([1] | range ..(-3))
+([1] | range ..(-2))
+([1] | range ..(-3))
+([1] | range ..(-2))
+([1] | range ..(-1))
+source rangebug.nu
+test10a
+test10b
+test10c
+gs
+ga rangebug.nu
+gcom 'more rangebug.nu testing'
+jjj
+source rangebug.nu
+test10a
+test10b
+test10c
+exit
+source rangebug.nu
+test10a
+test10c
+test10b
+source rangebug.nu
+test10a
+test10b
+test10c
+([1] | range ..(-3))
+([1] | range ..(3))
+([1] | range ..(2))
+([1] | range ..(1<\n>))
+gs
+exit
+source rangebug.nu
+test01
+($sorted | range ..(-2))
+let sorted = [1 2 3 4 5]
+($sorted | range ..(-2))
+($sorted | range ..(-1))
+($sorted | range ..(-2))
+($sorted | range ..(-3))
+gs
+gco rangebug.nu
+gs
+version
+exit
+([1] | range ..(-4))
+dl
+ltm
+cls
+ls -lt
+^ls -ltm
+^ls -lt
+t22
+t10
+ls
+dl
+cp google-jsi-20211229.csv ~/j/tmp10/
+t10
+ls
+help ls
+ls -s
+open google-jsi-20211229.csv
+ls
+cp google-jsi-20211229.csv photo1.csv
+nuno
+exit
+echo get-nupm-home
+$nu.get-nupm-home
+$env.NUPM_HOME
+cd
+rm -fr .nupm
+nupmg
+exit
+use nupm
+exit
+use nupm
+nupm install --force --path .
+exit
+t10
+ls
+open photo1.csv
+open photo1.csv | get group
+open photo1.csv
+help get
+open photo1.csv | get name group
+open photo1.csv | get name group | to json
+open photo1.csv | get name group
+open photo1.csv | get group 
+help zip
+open photo1.csv | get group | describe
+open photo1.csv | get name group | describe
+open photo1.csv | get name group | save photo2.csv
+ls
+exit
+open photo1.csv | get name
+l
+touch test01.csv
+open test01.csv
+open test01.csv | describe
+open photo1.csv | describe
+open photo1.csv
+open test01.csv
+open test01.csv | describe
+open photo1.csv
+open test01.csv | describe
+open photo1.csv | describe
+open photo1.csv | get name group | describe 
+open test01.csv | describe
+open test01.csv | get name group | describe
+open test01.csv | get name | describe
+open test01.csv | get name
+open test01.csv
+help each
+cls
+help each
+exit
+help each
+cls
+help each
+help regex
+help match
+cls
+help match
+help --find regex
+l
+nurun
+open photo1.csv | get group
+ls
+open test01.csv | get group
+help each
+cls
+help each
+help for
+cls
+help for
+help each
+cls
+help each
+help loop
+help iterate
+help each
+cls
+help each
+help map
+help each
+cls
+help each
+open test01.csv | get group | each {|e| if $e =~ "photo" }
+open test01.csv | get group | each {|e| echo $e}
+open test01.csv | get group | each {|e| $e}
+open test01.csv | get group | each {|e| $e =~ 'photo'}
+open photo1.csv | get group | each {|e| $e =~ 'photo'}
+open photo1.csv | get name group | each {|e| $e =~ 'photo'}
+open photo1.csv | get group | each {|e| $e =~ 'photo'}
+cls
+open photo1.csv | get group | each {|e| $e =~ 'photo'}
+nupm install --path nu-git-manager --force
+cd ..
+nupm install --path nu-git-manager --force
+cd nu-git-manager/
+nupm install --path .  --force
+cd ..
+nupm install --path nu-git-manager --force
+cd nu-git-manager/
+nupm install --path .  --force
+open photo1.csv | get name
+cls
+open photo1.csv | get name
+nus
+l
+touch gmcontact.nu
+gs
+ga gmcontact.nu
+gcom 'initial commit of gmcontact.nu'
+jjj
+gs
+t00
+t0
+t10
+cd ./../tmp00
+ls
+cat photo1.csv
+ls
+cat test01.csv
+nus
+mkdir data
+cd data/
+cp ~/j/tmp00/test01.csv .
+ls
+nupmg
+gppm
+gls
+gs
+l
+cd nupm/
+l
+c
+version
+c
+ls
+clear
+help clear
+clear
+eq
+rg clear
+nucom
+ls
+cd src/
+ls
+cd platform/
+ls
+which cls
+exit
+which cls
+clear
+ls
+help throw-error
+eq
+rg std
+cls
+rg std
+fd std.nu
+cd
+cd crates/nu-std
+eq
+cd crates/nu-std
+ls 
+help commands | select name usage | where name =~ "std "
+use std
+help commands | select name usage | where name =~ "std "
+help commands
+use mike
+use std
+exit
+help commands
+use std
+exit
+help commands
+use std
+help commands
+cls
+help commands
+help cd
+cls
+help cd
+exit
+help commands
+cls
+help commands
+use std
+help commands
+help datetime
+help datetime-diff
+cls
+help datetime-diff
+help commands | select name usage | where name =~ "datetime "
+help commands | select name usage | where name =~ "datetime"
+help commands
+help commands | where name == datetime-diff
+help commands | where name == datetime-diff | table -e
+cls
+help commands | where name == datetime-diff | table -e
+help table -e
+help table
+help commands | where name == datetime-diff | table -d
+help commands | where name == datetime-diff | table -d 5
+help commands | where command_type == custom
+eq
+cd nupm
+17
+t17
+cd nupm
+ls
+cd nupm
+ls
+cp install.nu ~/j/tmp17/nuscripts/
+nus
+gs
+cd data
+ls
+cd ..
+ls
+mv install.nu fileio.nu
+gs
+gls
+source gmcontact.nu
+test1
+source gmcontact.nu
+test01
+test1
+source gmcontact.nu
+test1
+gs
+ga data
+ga gmcontact.nu
+gcom 'opening file for gmcontact.nu'
+jjj
+gls
+source gmcontact.nu
+test1
+gs
+source fileio.nu
+open-package-file
+open-package-file data
+nupmg
+ls
+cd nupm
+cd utils/
+ls
+cp log.nu ~/j/tmp17/nuscripts/
+nus
+gs
+source fileio.nu
+open-package-file data
+cls
+open-package-file data
+help log
+rg Unknown
+eq
+rg "gather unknown"
+rg "gather system"
+log collect
+man log
+nus
+gs
+source fileio.nu
+open-package-file data
+log help collect
+source fileio.nu
+open-package-file data
+nupmg
+rg open-package-file
+source fileio.nu
+nus
+source fileio.nu
+test10
+test10 data
+source fileio.nu
+test10 data
+cls
+test10 data
+source fileio.nu
+test10 data
+gs
+ga fileio.nu log.nu
+gcom 'up and running with fileio.nu and log.nu'
+jjj
+source fileio.nu
+test10 data
+source fileio.nu
+test10 data
+source fileio.nu
+test10 data
+gs
+ga fileio.nu
+gcmw
+jjj
+source fileio.nu
+test10 data
+gs
+ga fileio.nu
+gcmw
+jjj
+exit
+nus
+source fileio.nu
+test10 data
+exit
+ns
+nus
+source fileio.nu
+test10 data
+gs
+ga fileio.nu
+gcmw
+jjj
+gs
+exit
+source fileio.nu
+test10 data
+gs
+ga fileio.nu
+gcmw
+jjj
+gs
+exit
+scope modules | where name =~ '^std' | get submodules.0
+cls
+scope modules | where name =~ '^std' | get submodules.0
+cls
+exit
+scope modules | where name =~ '^std' | get submodules.0
+scope
+rg "struct scope"
+rg "struct Scope"
+$nu
+history
+scope
+scope modules
+scope engine-stats
+rg active_overlays
+cls
+rg active_overlays
+overlay
+overlay list
+rg OverlayFrame
+cls
+rg OverlayFrame
+overlay list
+nuno
+exit
+gm status
+exit
+gm status
+exit
+gm status
+ls -al
+gm status
+cd .nupm
+ls -l
+pwd
+exit
+gm status
+cd .nupm
+ls
+gm clone https://github.com/stormasm/nu_plugin_jwalk
+exit
+gm update-cache
+gm status
+gm list
+exit
+cpconfig
+nuconfigme
+gs
+cls
+gs
+gd alias.nu
+gd config.nu
+gd env.nu
+gs
+ga alias.nu config.nu env.nu
+gcom 'update GIT_REPOS_HOME GIT_REPOS_CACHE'
+jjj
+cpconfig
+nuconfigme
+gs
+nupmg
+nupm test
+ngm
+nupm test
+exit
+nupm test
+numpg
+npmg
+nupm-ngm
+gpgm
+jjj
+nupmg
+gppm
+nupm test
+ngm
+cd tests
+ls
+source mod.nu
+cd
+cd .nupm
+ls
+pwd
+ngm
+cd tests
+l
+source mod.nu
+cache-manipulation
+install-package
+list-all-repos-in-store
+get-repo-cache
+nupm test
+gs
+gd mod.nu
+nupm test
+gs
+gd mod.nu
+gs
+nupm test
+cd ..
+nupm test
+gs
+nupm test
+nut
+nuconfig
+source alias.nu
+nupmg
+nut
+ngm
+nut
+cd
+cpconfig
+nuconfigme
+gs
+gd alias.nu
+cls
+gs
+gd alias.nu
+gs
+ga alias.nu
+gcom 'add in a new alias nut = nupm test'
+jjj
+cpconfig
+gs
+stars
+gs
+nuconfigme
+gs
+gls
+nupmg
+nut
+ngm
+nut
+gs
+gd tests/mod.nu
+cd
+cd .nupm
+ls -l
+cd nu-git-manager/
+ls
+pwd
+nut
+ngm
+nut
+cd
+cat .rust | grep nut
+cat .rust | grep nupm
+cls
+scope
+scope modules | where name =~ '^std' | get submodules.0
+scope modules
+cls
+scope modules
+scope modules | where name =~ '^std'
+cls
+scope modules | where name =~ '^std'
+scope modules | where name =~ '^std' | get submodules.0
+rciy
+exit
+scopemodstd
+nuconfig
+source alias.nu
+scopemodstd
+exit
+scopemodstd
+$nu
+exit
+scopemodstd
+exit
+source_alias
+exit
+source_alias
+scopemodstd
+exit
+const
+help const
+cls
+clear
+help const
+exit
+nuconfig
+exit
+scopemodstd
+exit
+scopemodstd
+exit
+cpconfig
+nuconfigme
+gs
+cls
+gs
+gd alias.nu
+cls
+gd config.nu
+exit
+cpconfig
+nuconfigme
+gs
+cls
+gs
+gd alias.nu
+gd config.nu
+gs
+ga alias.nu config.nu
+gcom 'source alias.nu in application support dir'
+jjj
+delete-nupm
+cd
+cd .nupm
+exit
+nupmg
+nuconfig
+exit
+cls
+clear
+exit
+nuconfig
+l
+touch nupm.nu
+exit
+cd .nupm
+ls 
+ls -al
+cd .m2
+ls
+lsr
+cd
+exit
+nuconfig
+ls
+source nupm.nu
+install-nupm
+install-nu-git-manager
+source nupm.nu
+exit
+use nupm
+nupm install --force --path .
+exit
+npm
+ngm
+t17
+nupm install --path --force nu-git-manager
+exit
+gm status
+exit
+ps
+exit
+exit
+exit
+exit
+nu --commands $"use ($env.PWD)/nupm/; nupm test"
+exit
+nuconfigme
+gs
+exit
+cpconfig
+nuconfigme
+gs
+exit
+nuconfig
+source nupm.nu
+delete-nupm
+source nupm.nu
+install-nupm
+install-nu-git-manager
+gm status
+delete-nupm
+install-nupm
+install-nu-git-manager
+gm status
+delete-nupm
+cd
+cd .nupm
+nuconfig
+install-nupm
+install-nu-git-manager
+gm status
+exit
+cpconfig
+nuconfigme
+gs
+cls
+gs
+gd alias.nu
+gd env.nu
+gs
+ga alias.nu env.nu nupm.nu
+gcom 'initial commit of nupm.nu'
+jjj
+exit
+nuconfig
+source nupm.nu
+delete-nupm
+install-nupm
+exit
+nuconfig
+delete-nupm
+source nupm.nu
+delete-nupm
+install-nupm
+install-ngm
+nuconfig
+source config.nu
+source nupm.nu
+delete-nupm
+install-nupm
+install-ngm
+gm status
+exit
+nuconfig
+delete-nupm
+source nupm.nu
+delete-nupm
+install-nupm
+install-ngm
+nupm
+nupm help
+nupm
+cd
+cd .nupm
+ls
+cd scripts/
+l
+cd ..
+cd modules
+ls
+nuconfig
+source nupm.nu
+delete-nupm
+use nu-git-manager *
+exit
+nuconfig
+exit
+source nupm.nu
+install-nupm
+nupmg
+exit
+use nupm
+nuconfig
+exit
+source nupm.nu
+install-nupm
+source nupm.nu
+install-nupm
+source nupm.nu
+install-nupm
+source nupm.nu
+install-nupm
+delete-nupm
+exit
+source config.nu
+cls
+source config.nu
+exit
+cls
+source config.nu
+exigt
+exit
+sumconfig
+exit
+cls
+sumconfig
+nuconfigme
+pwd
+nuconfig
+diff alias.nu ~/j/tmp17/nuconfig/alias.nu
+cp alias.nu ~/j/tmp17/nuconfig/alias.nu
+nuconfigme
+gs
+gd alias.nu
+gs
+ga alias.nu
+gcom 'add in a new method called sumconfig'
+jjj
+cd
+exit
+sumconfig
+nuconfigme
+gs
+l
+pwd
+nuconfig
+cp ~/j/tmp17/nuconfig/nupm.nu .
+sumconfig
+cp ~/j/tmp17/nuconfig/config.nu .
+sumconfig
+cpconfig
+cls
+sumconfig
+exit
+sumconfig
+cpconfig
+nuconfigme
+gs
+gd alias.nu
+cpconfig
+nuconfigme
+gs
+cls
+gd alias.nu
+ga alias.nu
+gcom 'alias.nu'
+jjj
+gs
+gd config.nu
+nuconfig
+source nupm.nu
+delete-nupm
+install-nupm
+install-ngm
+source nupm.nu
+install-ngm
+install-nu-git-manager
+cpconfig
+nuconfigme
+gs
+gd nupm.nu
+gs
+ga nupm.nu
+gcom 'add another alias install-ngm'
+jjj
+cpconfig
+nuconfigme
+gs
+cpconfig
+sumconfig
+cls
+sumconfig
+cd
+exit
+nuconfig
+source nupm.nu
+delete-nupm
+install-nupm
+install-ngm
+exit
+gm status
+gm clone https://github.com/stormasm/nu_plugin_jwalk
+exit
+gm update-cache
+gm clone https://github.com/stormasm/nu_plugin_jwalk
+cls
+gm clone https://github.com/stormasm/nu_plugin_jwalk
+exit
+gm clone https://github.com/stormasm/nu_plugin_jwalk
+ps
+psnu
+ps | get name
+exit
+gm clone https://github.com/stormasm/nu_plugin_jwalk
+exit
+source gmcontact.nu
+test1
+cd data/
+ls
+open test01.csv
+cd ..
+source gmcontact.nu
+test1
+source gmcontact.nu
+test1
+test1 | describe
+source gmcontact.nu
+test1 | describe
+source gmcontact.nu
+test1
+source gmcontact.nu
+test1
+source gmcontact.nu
+test1
+source gmcontact.nu
+test1
+gs
+cp gmcontact.nu gmcontact02.nu
+gs
+gco gmcontact.nu
+source gmcontact.nu
+test1
+test2
+test1
+test2
+gs
+ga gmcontact.nu
+gcmw
+jjj
+gs
+rm gmcontact02.nu
+gs
+source gmcontact.nu
+test2
+source gmcontact.nu
+test2
+source gmcontact.nu
+test2
+source gmcontact.nu
+test2
+gs
+gco gmcontact.nu
+source gmcontact.nu
+test3
+source gmcontact.nu
+test3
+source gmcontact.nu
+test3
+source gmcontact.nu
+test2
+source gmcontact.nu
+test2
+open data/test01.csv
+open data/test01.csv | get index
+source gmcontact.nu
+test4
+source gmcontact.nu
+test4
+source gmcontact.nu
+test4
+source gmcontact.nu
+cls
+source gmcontact.nu
+test5
+help enumerate
+cd data/
+ls
+cd ..
+open data/test01.csv | enumerate
+open data/test01.csv | enumerate | each |e| e.index
+open data/test01.csv | enumerate | each { |e| e.index }
+open data/test01.csv | enumerate | each { |e| $e.index }
+open data/test01.csv | enumerate | each { |e| $e.index $e.item }
+index(["bar", "foo", "baz"], "foo")
+index
+source gmcontact.nu
+test2
+source gmcontact.nu
+test2
+source gmcontact.nu
+test2
+source gmcontact.nu
+test2
+source gmcontact.nu
+test2
+nusn
+gp
+gpnus
+exit
+source gmcontact.nu
+test1
+test2
+test3
+test4
+test5
+gs
+ga gmcontact.nu
+gcmw
+jjj
+gs
+source gmcontact.nu
+test1
+test2
+test3
+test4
+test5
+exit
+source fehbg.nu
+source todo.nu
+ls
+source temp.nu
+more temp.nu
+cd misc/
+ls
+source table_grouping.nu
+cls
+source table_grouping.nu
+cp table_grouping.nu ~/j/tmp17/nuscripts/
+nus
+source table_grouping.nu
+cls
+source table_grouping.nu
+grso
+gls
+gs
+ga table_grouping.nu
+gcom 'intial commit of table_grouping'
+jjj
+gs
+gls
+[a, b, c]
+[true, false, false, true, false, true]
+[true, false, false, true, false, true] | enumerate
+[true, false, false, true, false, true] | enumerate | each { |r| if {$r == true} {print $r}}
+[true, false, false, true, false, true] | enumerate | each { |r| if {($r == true)} {print $r}}
+[true, false, false, true, false, true] | enumerate | each { |r| if {$r == 'true'} {print $r}}
+[true, false, false, true, false, true] | enumerate | each { |r| if {$r} {print $r}}
+[true, false, false, true, false, true] | enumerate | each { |r| if {($r)} {print $r}}
+[true, false, false, true, false, true] | enumerate | each { |r| {print $r}}
+[true, false, false, true, false, true] | enumerate | each { |r| {$r}}
+[true, false, false, true, false, true] | enumerate | each { |r| {$r.0}}
+[true, false, false, true, false, true] | enumerate | each { |r| print $r}
+source gmcontact.nu
+test6
+cls
+test6
+gs
+ga gmcontact.nu
+gcmw
+jjj
+gs
+source gmcontact.nu
+test6
+source gmcontact.nu
+test6
+source gmcontact.nu
+test6
+source gmcontact.nu
+test6
+source gmcontact.nu
+test6
+gs
+cp gmcontact.nu gmcontact02.nu
+gco gmcontact.nu
+source gmcontact.nu
+cls
+test6
+test7
+gs
+ga gmcontact.nu
+gcmw
+jjj
+gs
+rm gmcontact02.nu
+exit
+source gmcontact.nu
+test6
+test7
+source gmcontact.nu
+test8
+test7
+help insert
+cls
+help insert
+source gmcontact.nu
+test7
+help append
+source gmcontact.nu
+test7
+gs
+cp gmcontact.nu gmcontact02.nu
+gco gmcontact.nu
+cat gmcontact02.nu
+ls
+source gmcontact.nu
+test7
+test8
+test9
+cls
+test7
+test8
+test9
+gs
+ga gmcontact.nu
+gcmw
+jjj
+rm gmcontact02.nu
+gs
+source gmcontact.nu
+test8
+test8 | describe
+test7 | describe
+gs
+cd
+cd Library/
+fd LaunchDaemons
+ls -l
+pwd
+cd
+exit
+exit
+exit
+[[a b]; [1 2] [2 [4 4]]] | table --collapse
+[[a b]; [1 2] [3 4] [5 6]] | roll down
+[[a b]; [1 2] [3 4] [5 6]]
+[[a b]; [1 2] [3 4] [5 6]] | ast
+help ast
+ast '[[a b]; [1 2] [3 4] [5 6]]'
+[[a b]; [1 2] [3 4] [5 6]] | describe
+[[a b]; [1 2] [3 4]] | describe
+[[a b]; [1 2] [3 bill]] | describe
+[[a b]; [1 2] [3 bill]]
+[[a b]; [1 2] [3 4]] | debug
+help debug
+history
+nupro
+exit
+history
+[[a b]; [1 2] [3 4]] | debug
+[[a b]; [1 2] [3 4]] | debug -r
+cls
+[[a b]; [1 2] [3 4]] | debug -r
+exit
+cls
+[[a b]; [1 2] [3 4]] | debug -r
+[1 2 3] | debug -r
+[a:1, b:2] | debug -r
+[[a b] [1 2] [c d]] | debug -r
+[[a] [1] 2 [c]]
+[[a] [1] 2 [c]] | debug -r
+aria2c
+exit
+nus
+gs
+sh nightly.nu
+source nightly.nu
+nu-fetch-nightly
+exit
+nus
+ls -l
+source nightly.nu
+nu-fetch-nightly
+cd /tmp
+ls -l
+cd /tmp
+ls -l
+exit
+./nu
+exit
+version
+exit
+history
+[[a] [1] [c]]
+[a b c]
+[[a] [1] [c]] | debug -r
+cls
+[[a] [1] [c]] | debug -r
+history
+[[a b]; [1 2] [3 4]] | debug -r
+cls
+[[a b]; [1 2] [3 4]] | debug -r
+[[a b]; [1 a] [3 b]] | debug -r
+cls
+[[a b]; [1 a] [3 b]] | debug -r
+[[a b]; [a 1] [3 b]] | debug -r
+[[a b c]; [a 1] [3 b]] | debug -r
+[[a b]; [a 1 b] [3 b 2]] | debug -r
+nupro
+ls -l
+cd src/
+l
+cd value/
+l
+exit
+cd nupm
+l
+ls
+use nupm
+t17
+exit
+get-nupm-home
+$env.NUPM_HOME?
+cd .nupm
+cd
+cd .nupm
+ls
+cd
+$nu.home-path
+$env.NUPM_HOME = ($nu.home-path | path join ".nupm")
+$env.NUPM_HOME
+exit
+get-nupm-home
+cd .nupm
+cd
+cd .nupm
+ls
+pwd
+cd
+get-nupm-home
+ls
+cd .nupm
+ls
+cd modules/
+ls
+cd nump
+cd nupm
+ls
+exit
+gs
+exit
+version
+exit
+nuconfig
+exit
+source env.nu
+source nupm.nu
+delete-nupm
+install-nupm
+install-nu-git-manager
+exit
+nuconfig
+exit
+source env.nu
+exit
+source env.nu
+source nupm.nu
+delete-nupm
+exit
+delete-nupm
+source nupm.nu
+delete-nupm
+install-nu-pm
+install-nupm
+install-nu-git-manager
+exit
+source env.nu
+source nupm.nu
+delete-nupm
+install-nupm
+exit
+use nupm
+exit
+use nupm
+nupm install --force --path .
+nuconfig
+$env.NUPM_HOME = ($nu.home-path | path join ".nupm")
+cd $env.NUPM_HOME
+cd ($env.NUPM_HOME)
+$env.NUPM_HOME
+$nu
+cd default-config-dir
+cd ($nu.default-config-dir)
+cd $nu.default-config-dir
+cd
+cd $nu.default-config-dir
+exit
+source env.nu
+source nupm.nu
+delete-nupm
+install-nupm
+cd get-nupm-home
+cd (get-nupm-home)
+cd /Users/ma/j/tmp17/nupm
+use nupm
+exit
+source env.nu
+source nupm.nu
+exit
+cd $nu.default-config-dir
+source env.nu
+cd /Users/ma/j/tmp17/nupm
+use nupm
+nupm install --force --path .
+exit
+cd $nu.default-config-dir
+source env.nu
+source nupm.nu
+delete-nupm
+install-nupm
+exit
+cd /Users/ma/j/tmp17/nupm
+use nupm
+nupm install --force --path .
+exit
+cd $nu.default-config-dir
+source env.nu
+source nupm.nu
+install-nupm
+exit
+cd j
+cd tmp17
+cd nupm
+nu --commands $"use ($env.PWD)/nupm/"; nupm install --force --path .
+use nupm
+nupm install --force --path .
+cd
+rm -fr .nupm
+exit
+cd $nu.default-config-dir
+source env.nu
+source nupm.nu
+goto-nupm
+cd /Users/ma/j/tmp17/nupm
+goto-nupm
+nupmg
+exit
+cd /Users/ma/j/tmp17/nupm
+use nupm
+nupm install --force --path .
+exit
+cls
+exit
+nupmg
+use nupm
+exit
+cd /Users/ma/j/tmp17/nupm
+use nupm
+installnupm
+nupmg
+installnupm
+exit
+npmg
+nupmg
+use nupm
+installnupm
+echo hello
+exit
+installnupm
+exit
+cls
+def installnupm [] {<\n>  echo hello<\n>  #nupm install --force --path .<\n>}
+installnupm
+def installnupm [] {<\n>  echo hello<\n>  nupm install --force --path .<\n>}<\n>
+cd /Users/ma/j/tmp17/nupm
+use nupm
+installnupm
+use nupm
+nupm install --force --path .
+installnupm
+exit
+nugm
+exit
+$nu
+cd $env.NU_CONFIG_ME
+touch why.nu
+e why.nu
+cat why.nu
+nuconfig
+nuconfigme
+exit
+cpconfig-reverse
+nuconfig
+cat why.nu
+exit
+sumconfig
+nuconfig
+cat alias.nu
+cp alias.nu ~/j/tmp17
+sum alias.nu ~/j/tmp17/alias.nu
+exit
+sumconfig
+cpconfig-reverse
+sumconfig
+exit
+sumconfig
+cp $nu.config-path $env.NU_CONFIG_ME
+nuconfigme
+gs
+c
+cat config.nu
+gs
+ga config.nu
+gcom 'remove all nupm config stuff and take config.nu back to its roots of simplicity, eventually the nupm config stuff will be inside its own file'
+jjj
+gs
+rm why.nu
+rm why.nu~
+gs
+nuconfig
+cat alias.nu
+exit
+cp $env.alias-path $env.NU_CONFIG_ME
+nuconfigme
+gs
+gd alias.nu
+gs
+ga alias.nu
+gcom 'add in a new method called cpconfig-reverse'
+jjj
+sumconfig
+exit
+rm -fr .nupm
+npmg
+exit
+nupmg
+use nupm
+nupm install --force --path .
+nuconfig
+source nupm.nu
+nupm-ngm
+use nu-git-manager *
+gm list
+gm update-cache
+install-ngm
+exit
+nuconfig
+source nupm.nu
+cd get-nupm-home
+get-nupm-home
+$env.NUPM_HOME
+get-nupm-home
+source nupm.nu
+cls
+sumconfig
+cpconfig
+nuconfigme
+gs
+ga nupm.nu
+gcom 'working on getting nupm.nu to work'
+jjj
+exit
+cpconfig
+nuconfigme
+gs
+nuconfig
+source nupm.nu
+usengm
+gm list
+gm
+gm help
+usengm
+ngm
+usengm
+gm help
+use nu-git-manager *
+gm
+exit
+ngm
+nuconfig
+source nupm.nu
+ngm
+usengm
+gm
+nuno
+exit
+ngm
+use nu-git-manager *
+gm
+history
+exit
+ngm
+alias whymelord use nu-git-manager *
+alias whymelord = use nu-git-manager *
+def jimloves [] { use nu-git-manager * }
+jimloves
+gm
+use nu-git-manager *
+gm
+nuno
+exit
+nuconfig
+cd
+cd $nu.default-config-dir   
+nuno
+exit
+nuno
+cpconfig
+nuconfigme
+gs
+cls
+gs
+gd alias.nu
+gd nupm.nu
+gs
+ga alias.nu
+gcmw
+jjj
+exit
+nuconfig
+source nupm.nu
+install-ngm
+exit
+nuconfig
+source nupm.nu
+nupmg
+nuconfig
+source nupm.nu
+nupmg
+use nupm
+nuconfig
+source nupm.nu
+gm
+nupmg
+ls -l
+use nupm
+nuconfig
+source nupm.nu
+gm
+exit
+nuconfig
+source nupm.nu
+nupmg
+cd nupm
+use nupm
+ls
+exit
+nuconfig
+source nupm.nu
+nupmg
+use nupm
+nuconfig
+source nupm.nu
+gm
+nuconfig
+source nupm.nu
+gm
+exit
+nuconfig
+source nupm.nu
+nupmg
+use nupm
+nuconfig
+source nupm.nu
+gm
+nupmg
+nuconfig
+source nupm.nu
+gm
+nupmg
+nuconfig
+use nupm
+nupmg
+use nupm
+exit
+nuconfig
+use nupm
+nupmg
+use nupm
+gm
+nuconfig
+source nupm.nu
+gm
+nupmg
+use nupm
+nuconfig
+source nupm.nu
+gm
+cpconfig
+nuconfigme
+gs
+ga nupm.nu
+gcmw
+jjj
+exit
+nupmg
+use nupm
+exit
+gm
+nupmg
+use nupm
+nuconfig
+source nupm.nu
+gm
+nuno
+gs
+ga nupm/Readme.md
+gcmw
+jjj
+install-ngm
+install-nupm
+delete-nupm
+install-nupm
+install-ngm
+nuconfig
+source nupm.nu
+cpconfig
+nuconfigme
+gs
+sumconfig
+gs
+cpconfig-reverse
+sumconfig
+cpconfig
+nuconfigme
+gs
+gd alias.nu
+gs
+ga alias.nu
+gcmw
+jjj
+sumconfig
+cpconfig-reverse 
+exit
+cpconfig-reverse 
+nuconfigme
+gs
+cpconfig
+nuconfigme
+gs
+delete-nupm
+nuconfig
+source nupm.nu
+exit
+nupmg
+use nupm
+nuconfig
+source nupm.nu
+gm
+delete-nupm
+install-nupm
+install-ngm
+nuno
+gs
+ga nupm/Readme.md
+gcmw
+jjj
+exit
+cpconfig
+nuconfigme
+gs
+exit
+nupmg
+use nupm
+nuconfig
+source nupm.nu
+gm
+delete-nupm
+install-nupm
+install-ngm
+gm
+exit
+cpconfig
+nuconfig
+gs
+nuconfigme
+gs
+nuno
+gs
+exit
+install-ngm
+nupmg
+use nupm
+nuconfig
+source nupm.nu
+gpgm
+gm
+gm status
+nuno
+gs
+ga nupm/Readme.md
+gcom 'add in a reference to antoine dotfiles'
+jjj
+t17
+mkdir amtoine
+cd amtoine/
+gc git@github.com:amtoine/dotfiles.git
+l
+exit
+gm
+exit
+gm
+exit
+gm
+cls
+gm
+gm status
+exit
+sumconfig
+cpconfig
+nuconfigme
+gs
+gd config.nu
+gs
+ga config.nu
+gcom 'add back in use nu-git-manager *'
+jjj
+exit
+gm
+exit
+gm
+exit
+cpconfig
+cpconfig-reverse 
+sumconfig
+exit
+gm
+exit
+{{nupm-home}}
+cd .nupm
+ls
+nuconfig
+l
+cp env.nu env-orig.nu
+l
+exit
+gm
+exit
+gm
+cd .nupm
+ls
+cd scripts/
+l
+ls
+sumconfig
+cd ..
+cd modules/
+l
+c
+ls
+eq
+rg NU_LIB_DIRS
+help use
+cls
+help use
+help modules
+cls
+help modules
+help modules | get nu-git-manager
+help modules | where name == nu-git-manager
+{{nupm-home}}
+{{gm-clone}}
+nuconfig
+cd
+cd .nupm
+pwd
+ls -al
+cd ..
+ls -l
+nuconfig
+cd
+ls -l .nupm
+ls -l .*
+exit
+gm
+exit
